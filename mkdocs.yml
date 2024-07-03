@@ -55,7 +55,7 @@ plugins:
   - search:
       lang: es
   - roamlinks
-   - blog
+  - blog
   # dudas
   - offline
   - optimize
