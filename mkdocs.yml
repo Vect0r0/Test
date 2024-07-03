@@ -1,7 +1,7 @@
 site_name: Guia Lógica ESP
 
 theme:
-    name: material
+    name: 'material'
     #custom_dir: overrides
     languaje: es
     logo:     
@@ -52,8 +52,7 @@ markdown_extensions:
       permalink: true
 
 plugins:
-  - search:
-      lang: es
+  - search
   - roamlinks
   - blog
   # dudas
