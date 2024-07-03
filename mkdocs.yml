@@ -2,6 +2,7 @@ site_name: Guia Lógica ESP
 
 theme:
     name: 'material'
+    custom_dir: overrides
     languaje: es
     logo:     
     palette: 
@@ -54,6 +55,9 @@ plugins:
   - search
   - roamlinks
   - blog
+  # dudas
+  - offline
+  # - optimize
   - rss:
       match_path: blog/posts/.* 
       date_from_meta:
