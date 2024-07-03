@@ -1,7 +1,7 @@
 site_name: Guia Lógica ESP
 
 theme:
-    name: 'material'
+    name: material
     custom_dir: overrides
     languaje: es
     logo:     
