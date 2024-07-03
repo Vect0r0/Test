@@ -58,7 +58,7 @@ plugins:
   - blog
   # dudas
   - offline
-  - optimize
+  # - optimize
 
   - rss:
       match_path: blog/posts/.* 
