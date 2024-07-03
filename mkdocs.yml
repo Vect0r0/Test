@@ -59,7 +59,6 @@ plugins:
   # dudas
   - offline
   # - optimize
-
   - rss:
       match_path: blog/posts/.* 
       date_from_meta:
