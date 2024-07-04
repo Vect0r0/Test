@@ -1,4 +1,5 @@
-# Guia Lógica de Mindustry
+# Guía Lógica Mindustry
 
-Bienvenidos a esta guía de lógica básica(creo que es esto) donde se explicara el funcionamiento de todo comando del que tengo conocimiento con ejemplos y de una manera que cualquier podría entenderlo (eso espero), la guía abordara todo el sistema lógico de la v6 y no explicara los nuevos comandos y procesos de la v7.
+La siguiente guía explicará el funcionamiento de este sistema dentro del juego, de una manera que puedas entender lo básico del mismo. Se basa en lo que conozco por lo que hay partes que podrían estar incompletas o tener algunos detalles. No se tiene contemplado por el momento explicar algunos sistemas agregados en la v7.
 
+Es recomendable que tengas conocimiento previo relacionado a la programación para facilitarte el aprendizaje. Además de que nunca falta un poco de inglés, pero no es necesario, haré lo posible para traducirlo.
