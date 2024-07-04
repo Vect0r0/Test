@@ -3,7 +3,9 @@ site_name: Guia Lógica ESP
 theme:
     name: material
     custom_dir: overrides
-    languaje: es
+    language: es
+    font: 
+      text: Roboto    
     logo:     
     palette: 
 
