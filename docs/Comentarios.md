@@ -1,7 +1,4 @@
 ---
 comments: true
 ---
-
-# Hola mundo
-...
-
+# Comentarios

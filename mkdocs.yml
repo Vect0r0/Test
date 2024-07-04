@@ -14,7 +14,7 @@ theme:
       accent: purple
       toggle:
         icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
+        name: Cambia a modo obscuro
 
     # Dark mode
     - media: "(prefers-color-scheme: dark)"
@@ -23,7 +23,7 @@ theme:
       accent: deep purple
       toggle:
         icon: material/toggle-switch
-        name: Switch to light mode
+        name: Cambia a modo claro
 
 # Extensions
 markdown_extensions:
@@ -55,17 +55,8 @@ plugins:
   - search:
       lang: es
   - roamlinks
-  # dudas
   - offline
   # - optimize
-  - blog
-  - rss:
-      match_path: blog/posts/.* 
-      date_from_meta:
-        as_creation: date
-      categories:
-        - categories
-        - tags
 
 extra_javascript:
   - javascripts/mathjax.js
