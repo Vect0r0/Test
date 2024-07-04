@@ -57,7 +57,7 @@ plugins:
   - roamlinks
   # dudas
   - offline
-  - optimize
+  # - optimize
   - blog
   - rss:
       match_path: blog/posts/.* 
