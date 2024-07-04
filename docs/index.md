@@ -1,11 +1,5 @@
-# Obsidian Notes
+# Guia Lógica de Mindustry
 
-Publish your public notes with MkDocs
+Bienvenidos a esta guia de logica basica(creo que es esto) donde se explicara el funcionamiento de todo comando del que tengo conocimiento con ejemplos y de una manera que cualquier podria entenderlo (eso espero), la guia abordara todo el sistema logico de la v6 y no explicara los nuevos comandos y procesos de la v7.
 
-## Hello World!
 
-The `index.md` in the `/docs` folder is the homepage you see here.
-
-The folders in `/docs` appear as the main sections on the navigation bar.
-
-The notes appear as pages within these sections. For example, [[Note 1]] in `Topic 1`
