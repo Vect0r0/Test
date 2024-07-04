@@ -52,12 +52,13 @@ markdown_extensions:
       permalink: true
 
 plugins:
-  - search
+  - search:
+      lang: es
   - roamlinks
-  - blog
   # dudas
   - offline
-  # - optimize
+  - optimize
+  - blog
   - rss:
       match_path: blog/posts/.* 
       date_from_meta:
