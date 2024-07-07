@@ -4,7 +4,7 @@ Existen dos maneras principales de escribir el código lógico, de manera gráfi
 
 ## Editor visual
 
-El editor visual es la interfaz de edición que cuenta cada procesador (la que se abre al presionar el icono del lápiz). *Es el método recomendado para principiantes ya que fue diseñado para ser simple y fácil de entender y usar*.
+El editor visual es la interfaz de edición que cuenta cada procesador (la que se abre al presionar el icono del lápiz). **Es el método recomendado para principiantes ya que fue diseñado para ser simple y fácil de entender y usar**.
 
 Las ventajas de este por sobre la edición manual son las siguientes:
 
@@ -17,7 +17,7 @@ Las ventajas de este por sobre la edición manual son las siguientes:
 
 ## Editor manual
 
-El editor manual implica el uso de herramientas para editar código como VisualStudio, Notepad++ o alguna otra. *Es un método recomendado para usuarios experimentados ya que hay momentos donde el editor visual será difícil de usar conforme el código crece*.
+El editor manual implica el uso de herramientas para editar código como VisualStudio, Notepad++ o alguna otra. **Es un método recomendado para usuarios experimentados ya que hay momentos donde el editor visual será difícil de usar conforme el código crece**.
 
 Las ventajas de este por sobre la edición visual son las siguientes:
 
