@@ -1,0 +1,1 @@
+[[0-index|Guía Lógica Mindustry]]
