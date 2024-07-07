@@ -8,7 +8,6 @@
 - - [x] [[4-variables-y-constantes|Variables y Constantes]]
 - - [x] [[5-tipos-de-datos|Tipos de datos]]
 
-
 - - [ ] Concepto de instrucción
 	- - [ ] Entrada de datos
 	- - [ ] Salida de datos
@@ -29,5 +28,5 @@
 - - [ ] Comandos de entrada y salida
 	- - [ ] Trabajando con celdas de memoria
 	- - [ ] Instrucción print
-
+	
 - - [ ] Instrucción Draw
