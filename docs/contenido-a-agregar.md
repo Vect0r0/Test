@@ -31,4 +31,3 @@
 	- - [ ] Instrucción print
 
 - - [ ] Instrucción Draw
-- 
