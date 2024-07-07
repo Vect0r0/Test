@@ -1,12 +1,12 @@
 # Contenido a agregar 
 
-- - [x] [[que-es-la-logica|¿Que es la lógica?]]
-- - [x] [[como-escribir-codigo|Como escribir código]]
+- - [x] [[1-que-es-la-logica|¿Que es la lógica?]]
+- - [x] [[2-como-escribir-codigo|Como escribir código]]
 	- - [x] [[Trabajando con el editor visual]]
 	- - [x] [[Trabajando con el editor manual]]
-- - [x] [[limitaciones-de-la-logica|Limitaciones de la lógica]]
-- - [x] [[variables-y-constantes|Variables y Constantes]]
-- - [x] [[tipos-de-datos|Tipos de datos]]
+- - [x] [[3-limitaciones-de-la-logica|Limitaciones de la lógica]]
+- - [x] [[4-variables-y-constantes|Variables y Constantes]]
+- - [x] [[5-tipos-de-datos|Tipos de datos]]
 
 
 - - [ ] Concepto de instrucción
