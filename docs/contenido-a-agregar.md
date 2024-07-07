@@ -1,7 +1,7 @@
 # Contenido a agregar 
 
 - - [x] [[que-es-la-logica|¿Que es la lógica?]]
-- - [x] [[como-escribir-codigo|]]
+- - [x] [[como-escribir-codigo|Como escribir código]]
 	- - [x] [[Trabajando con el editor visual]]
 	- - [x] [[Trabajando con el editor manual]]
 - - [x] [[limitaciones-de-la-logica|Limitaciones de la lógica]]

@@ -2,7 +2,7 @@
 
 Podemos decir que los tipos de datos en la lógica se dividen en 2 grupos, los números y los objetos:
 
-# Numeros
+# Números
 
 Básicamente un número decimal, puede ser negativo o positivo, además de que puede representar `verdadero` (usado como `true`) con valores diferentes al `0` y `falso` (usado como `false`) con el valor `0`. Además, el `0` también representará un valor nulo (usado como `null`).
 
