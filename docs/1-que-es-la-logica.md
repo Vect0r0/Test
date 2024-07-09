@@ -3,6 +3,7 @@
 La lógica en Mindustry (mlog) es un lenguaje de programación tipo scripting (ejecutado en tiempo real) creado para profundizar más en la automatización y creación de procesos en el juego, ya que nos permite modificar las entidades del mismo dependiendo de ciertas acciones, condiciones etc.
 
 El sistema en su estado actual permite las siguientes acciones:
+
 * Obtener información de unidades, bloques y del propio jugador.
 * Controlar bloques, unidades y torretas.
 * Mostrar información a manera de texto o gráficamente (pantallas).
