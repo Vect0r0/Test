@@ -5,7 +5,9 @@ theme:
     custom_dir: overrides
     language: es
     font: 
-      text: Roboto    
+      text: Roboto   
+    features:
+      - content.code.copy 
     logo:     
     palette: 
 
