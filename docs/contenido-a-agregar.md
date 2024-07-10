@@ -8,9 +8,9 @@
 - - [x] [[4-variables-y-constantes|Variables y Constantes]]
 - - [x] [[5-tipos-de-datos|Tipos de datos]]
 
-- - [ ] Concepto de instrucción
-	- - [ ] Entrada de datos
-	- - [ ] Salida de datos
+- - [x] [[6-concepto-de-instruccion|Concepto de instrucción]]
+	- - [x] [[6-concepto-de-instruccion#^b7b4bb|Entrada de datos]]
+	- - [x] [[6-concepto-de-instruccion#^f3235f|Salida de datos]]
 
 - - [ ] Comandos de operaciones
 
