@@ -4,7 +4,7 @@
  
 ### Concepto de variable
 
-Para comenzar, debemos entender el concepto de variable, las variables son "contenedores de información" que se guardan en memoria, en este caso, en un procesador. Estas deben tener un nombre para identificarlas, usarlas y modificaras. Estas además pueden contener distintos tipos de información o datos. Dentro del juego, una variable puede contener la información de una unidad, el estado de un bloque, un numero tan simple como una coordenada, o texto,consulta [[Tipos de datos]] para ver todos los tipos disponibles.
+Para comenzar, debemos entender el concepto de variable, las variables son "contenedores de información" que se guardan en memoria, en este caso, en un procesador. Estas deben tener un nombre para identificarlas, usarlas y modificaras. Estas además pueden contener distintos tipos de información o datos. Dentro del juego, una variable puede contener la información de una unidad, el estado de un bloque, un numero tan simple como una coordenada, o texto,consulta [[Tipos de datos]] para ver todos los tipos disponibles. La función principal de estas es hacer flexibles las instrucciones, por ejemplo, si le ordenas a una unidad moverse a la posición 100, 100 solo podrá moverse a esa posición, pero si en otro caso usar variables como `x` y `y`, que son modificadas por el procesador, entonces la unidad podrá moverse a donde el procesador le indique.
 
 ### Reglas en variables
 

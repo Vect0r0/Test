@@ -26,8 +26,20 @@ Este objeto representará una construcción física dentro del mundo. Por ejempl
 
 Este objeto representará una unidad física dentro del mundo. Por ejemplo un mono, un mega o la unidad del propio jugador.
 
+### Tipo de Bloque/Unidad (`Content`)
 
+Esto representará el "concepto" de cualquier contenido en el juego, si estas familiarizado con la programación, podemos decir que esto es la "clase", y `building` y `unit` serían los "objetos". Estos no cuentan con una representación física, por lo que algunas propiedades no existirán como si lo hicieran su contra-parte de "objeto", por ejemplo, @duo es una variable de tipo `content`, no tendrá propiedades como la coordenada x, la cantidad de munición, la rotación, etc. Algunas propiedades se compartirán con el "objeto", como el tamaño, la salud máxima y el rango.
 
+```
+set string "hola mundo"
+set number1 10
+set number2 10.2
+set construccion duo1
+ubind @poly
+set unidad @unit
+set tipo-de-bloque @duo
+set tipo-de-unidad @mega
+```
 
-
+[[Imagen|Visualización del menú Variables con el código anterior]]
 
