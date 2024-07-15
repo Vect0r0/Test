@@ -13,19 +13,19 @@
 - - [x] [[5-variables-y-constantes|Variables y Constantes]]
 - - [x] [[6-tipos-de-datos|Tipos de datos]]
 
-- - [ ] Comandos de operaciones
+- - [x] [[instrucciones-de-operacion|Instrucciones de operación]]
 
 - - [x] [[flujo-de-ejecucion|Flujo de ejecución]]
 	- - [x] [[flujo-de-ejecucion#^2b84cf|Estructuras de control de flujo]]
-		- - [ ] Manipulación avanzada del flujo de ejecución
+		- - [x] [[flujo-de-ejecucion#^79b104|Manipulación avanzada del flujo de ejecución]]
 
-- - [ ] Comandos de control de bloques
+- - [ ] Instrucciones de control de bloques
 
-- - [ ] Comandos de control de unidades
+- - [ ] Instrucciones de control de unidades
 	- - [ ] Funcionamiento de unit bind
 		- - [ ] Uso responsable de las unidades
 
-- - [ ] Comandos de entrada y salida
+- - [ ] Instrucciones de entrada y salida
 	- - [ ] Trabajando con celdas de memoria
 	- - [ ] Instrucción print
 	

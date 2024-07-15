@@ -29,4 +29,6 @@ Regresará a la primera instrucción del procesador. Esto es equivalente a llega
 
 ## Manipulación avanzada del flujo de ejecución
 
-Esta técnica se desarrolló en base a la variable `counter` que existe en cada procesador, esta variable indica cual será el indice de la próxima instrucción a ejecutarse, y al ser una variable, puede ser modificada, por lo que por ejemplo puedes simular el funcionamiento de una instrucción `jump`, o creación de estructuras como funciones. (No conozco mucho de esto)
+^79b104
+
+Esta técnica se desarrolló en base a la variable `counter` que existe en cada procesador, esta variable indica cual será el indice de la próxima instrucción a ejecutarse, y al ser una variable, puede ser modificada, por lo que por ejemplo puedes simular el funcionamiento de una instrucción `jump`, o creación de estructuras como funciones. (No conozco mucho de esto) ^465195

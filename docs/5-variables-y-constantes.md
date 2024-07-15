@@ -47,27 +47,74 @@ Cada procesador tiene variables y constantes propias, algunas referidas al mundo
 
 #### *@this* `constante` `construcción`
 
+Hace referencia al mismo procesador.
+
 #### *@thisx* `constante` `numero`
+
+Hace referencia a la coordenada `x` del procesador.
 #### *@thisy* `constante` `numero`
+
+Hace referencia a la coordenada `y` del procesador.
 #### *@ipt* `constante` `numero` 
+
+Hace referencia a las instrucciones por tick que este procesador está realizando. Adicional a esto, existe otra medida llamada `tps` o ticks por segundo, que en situaciones normales suele ser de 60. 
 #### *@counter* `variable` `numero`
+
+Hace referencia al índice de la próxima instrucción a ejecutarse, el indice comienza en 0 y terminará hasta la ultima instrucción - 1, es decir, si el procesador cuenta con 10 instrucciones, el indice va de 0 a 9. [[flujo-de-ejecucion#^465195|Puede ser modificada por el usuario para conseguir comportamientos avanzados.]]
 
 ### Relacionadas a las conexiones
 
 #### *@links* `constante` `numero`
+
+Hace referencia a la cantidad de construcciones vinculadas al procesador. Puede usarse para recorrer cada una de estas y realizar acciones.
 #### `constante` `numero`
+
+
 ### Relacionadas a las matemáticas
-#### *@pi*
-#### *π*
-#### *@e*
-#### *@degToRad*
-#### *@radToDeg*
+
+#### *@pi* `constante` `numero`
+
+Referencia al numero pi `3.1415927410125732` (numero pi).
+#### *π* `constante` `numero`
+
+Referencia al numero `3.1415927410125732` con más estilo (numero pi).
+#### *@e* `constante` `numero`
+
+Referencia al numero `2.7182817459106445` (numero euler).
+#### *@degToRad* `constante` `numero`
+
+Referencia al numero `0.01745329238474369`, multiplica este numero con tus grados para convertirlos a radianes.
+#### *@radToDeg* `constante` `numero`
+
+Referencia al numero `57.2957763671875`, multiplica este numero con tus radianes para convertirlos a grados.
 ### Relacionadas al mapa
-#### *@time* 
-#### *@tick*
-#### *@second*
-#### *@minute*
-#### *@waveNumber*
-#### *@waveTime*
-#### *@mapw*
-#### *@maph*
+#### *@time*  `constante` `numero`
+
+Tiempo desde que se empezó a jugar en el mapa, en milisegundos (tiempo en pausa no cuenta).
+#### *@tick* `constante` `numero`
+
+Ticks realizados desde que se empezó a jugar en el mapa, (tiempo en pausa no cuenta).
+#### *@second* `constante` `numero`
+
+Tiempo desde que se empezó a jugar en el mapa, en segundos (tiempo en pausa no cuenta).
+#### *@minute* `constante` `numero`
+
+Tiempo desde que se empezó a jugar en el mapa, en minutos (tiempo en pausa no cuenta).
+#### *@waveNumber* `constante` `numero`
+
+Referencia a la oleada actual.
+#### *@waveTime* `constante` `numero`
+
+Referencia al tiempo que falta para que inicie la próxima oleada, en segundos.
+#### *@mapw* `constante` `numero`
+
+Referencia al ancho del mapa, en casillas o tiles.
+#### *@maph* `constante` `numero`
+
+Referencia a lo alto del mapa, en casillas o tiles.
+
+### Relacionadas al control de unidades
+
+#### @unit `constante` `unidad` 
+
+Referencia a la unidad actualmente vinculada. Esta solo cambia cuando se desvincula la unidad o se vincula una nueva. Esta es usada por las instrucciones relacionadas al control de unidades para saber a que unidad afectar. **Solo una unidad puede ser controlada a la vez** por el procesador. Aunque, puedes almacenar la misma en una variable, esta no podrá usarse para controlar a esa unidad pero puedes seguir usandola en sensores. 
