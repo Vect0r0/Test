@@ -72,7 +72,7 @@ nav:
   - Inicio: 0-index.md
   - ¿Que es la lógica?: 1-que-es-la-logica.md
   - La instrucción: 
-    - Concepto de instrucción: 2-concepto-de-instrucción.md
+    - Concepto de instrucción: 2-concepto-de-instruccion.md
   - Como escribir código: 
     - Como escribir código: 3-como-escribir-codigo.md
     - Trabajando con el editor visual: 3.1-trabajando-con-el-editor-visual.md
