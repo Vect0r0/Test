@@ -67,3 +67,23 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://unpkg.com/mermaid/dist/mermaid.min.js 
+
+nav:
+  - Inicio: 0-index.md
+  - ¿Que es la lógica?: 1-que-es-la-logica.md
+  - La instrucción: 
+    - Concepto de instrucción: 2-concepto-de-instrucción.md
+      - Entrada de datos: 
+      - Salida de datos:
+  - Como escribir código: 
+    - Como escribir código: 3-como-escribir-codigo.md
+    - Trabajando con el editor visual: 3.1-trabajando-con-el-editor-visual.md
+    - Trabjando con el editor manual: 3.2-trabajando-con-el-editor-manual.md
+  - Limitaciones de la lógica: 4-limitaciones-de-la-logica.md
+  - Variables y constantes: 5-variables-y-constantes.md
+  - Tipos de datos: 6-tipos-de-datos.md
+  - Instrucciones de operación: instrucciones-de-operacion.md
+  - Flujo de ejecución: flujo-de-ejecución.md
+  - Comentarios: comentarios.md
+  - Contenido a agregar: contenido-a-agregar.md
+
