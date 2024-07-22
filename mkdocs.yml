@@ -69,7 +69,7 @@ extra_javascript:
   - https://unpkg.com/mermaid/dist/mermaid.min.js 
 
 nav:
-  - Inicio: 0-index.md
+  - Inicio: index.md
   - ¿Que es la lógica?: 1-que-es-la-logica.md
   - La instrucción: 
     - Concepto de instrucción: 2-concepto-de-instruccion.md
