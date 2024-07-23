@@ -21,7 +21,7 @@
 
 - - [ ] Instrucciones de control de bloques
 
-- - [ ] Instrucciones de control de unidades
+- - [x] [[instrucciones-de-control-de-unidades|Instrucciones de control de unidades]]
 	- - [ ] Funcionamiento de unit bind
 		- - [ ] Uso responsable de las unidades
 
