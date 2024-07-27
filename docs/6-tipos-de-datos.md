@@ -41,5 +41,6 @@ set tipo-de-bloque @duo
 set tipo-de-unidad @mega
 ```
 
-[[Imagen|Visualización del menú Variables con el código anterior]]
+![[menu-variables.png]]
 
+Visualización del menú Variables con el código anterior

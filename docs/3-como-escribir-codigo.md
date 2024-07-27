@@ -13,8 +13,7 @@ Las ventajas de este por sobre la edición manual son las siguientes:
 * Facilidad para establecer los saltos de linea (jumps).
 * Facilidad de usar para los jugadores de móvil.
 
-[imagen]
-
+![[editor-visual.png]]
 ## Editor manual
 
 El editor manual implica el uso de herramientas para editar código como VisualStudio, Notepad++ o alguna otra. **Es un método recomendado para usuarios experimentados ya que hay momentos donde el editor visual será difícil de usar conforme el código crece**.
@@ -28,8 +27,15 @@ Las ventajas de este por sobre la edición visual son las siguientes:
 * El texto de tus parámetros no queda bloqueado por el cuerpo del bloque.
 * Habilidad para salvar y acceder al código fuera de Mindustry.
 
+```
+ubind @dagger
+sensor salud @unit @health
+sensor saludMaxima @unit @maxHealth
+op div porcentaje salud saludMaxima
+jump 0 greaterThanEq porcentaje 0.4
+print "Retirando Unidad"
+printflush message1
+ucontrol move 100 100 0 0 0
+```
+
 Aún con esto, puede ser bastantes difícil para los principiantes que no se encuentren familiarizados con escribir código, ya que las variables tienen que "escribirse" explicita mente, además de que los saltos de linea (jumps) pueden ser difíciles de manejar sin una guía visual, entre otras cosas.
-
-(Pagina traducida de la wiki oficial)
-
-[imagen]
