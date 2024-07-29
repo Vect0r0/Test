@@ -3,8 +3,8 @@
 - - [x] [[1-que-es-la-logica|¿Que es la lógica?]]
 
 - - [x] [[2-concepto-de-instruccion|Concepto de instrucción]]
-	- - [x] [[2-concepto-de-instruccion#^b7b4bb|Entrada de datos]]
-	- - [x] [[2-concepto-de-instruccion#^f3235f|Salida de datos]]
+	- - [x] [[2-concepto-de-instruccion|Entrada de datos]]
+	- - [x] [[2-concepto-de-instruccion|Salida de datos]]
 
 - - [x] [[3-como-escribir-codigo|Como escribir código]]
 	- - [x] [[3.1-trabajando-con-el-editor-visual|Trabajando con el editor visual]]
