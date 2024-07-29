@@ -8,6 +8,9 @@ theme:
       text: Roboto   
     features:
       - content.code.copy 
+      - navigation.tracking
+      - navigation.top
+      - navigation.footer
     logo:     
     palette: 
 
@@ -56,6 +59,7 @@ markdown_extensions:
       permalink: true
 
 plugins:
+  - typeset
   - search:
       lang: es
   - roamlinks
@@ -70,6 +74,7 @@ extra_javascript:
 
 nav:
   - Inicio: index.md
+  - Como navegar en la guía: navegar-en-la-guia.md
   - ¿Que es la lógica?: 1-que-es-la-logica.md
   - La instrucción: 
     - Concepto de instrucción: 2-concepto-de-instruccion.md

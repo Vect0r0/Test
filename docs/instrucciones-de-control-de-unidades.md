@@ -102,36 +102,21 @@ Por ultimo está el parámetro `order` que cuenta con dos modos:
 * con valor `0`: ordenará la lista de unidades de manera descendente, específicamente, la invertirá.
 
 La unidad resultante se almacenará en la variable `output` para su uso.
-### any 
-
-Cualquier unidad.
-
-### ally
-
-Unidad aliada.
-
-### enemy
-
-Unidad enemiga.
-
-### player
-
-Unidad controlada por el jugador.
-
-target any ally enemy player attacker flying boss ground
-
-and 
-
-and
-
-order
-
-sort distance health shield armor maxHealth
-
-output
 
 ## Unit Locate
 
-Esta instrucción localizará haciendo uso de la unidad vinculada estructuras específicas en el mapa
+Esta instrucción localizará haciendo uso de la unidad vinculada estructuras u objetos de interés dentro del mapa, contiene 4 categorías de búsqueda:
+
+### Minerales `ore`
+
+Permitirá buscar vetas de minerales en el mapa, deberás seleccionar el mineral que la unidad debe buscar y te dará las coordenadas de la misma, además de una variable `found` que será `true` si este existe en el mapa, de otra manera `false`.
+
+### Construcción `building`
+
+Permitirá buscar construcciones dentro del mapa 
+### Punto de aparición `spawn`
+
+
+### Bloque dañado `damaged`
 
 
