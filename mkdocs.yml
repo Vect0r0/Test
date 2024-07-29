@@ -11,7 +11,7 @@ theme:
       - navigation.tracking
       - navigation.top
       - navigation.footer
-    logo: octicons/cpu-16
+    logo: octicons-cpu-16
     #icon:
     #  previous: images/UI/rotate-left.png
     #  next: images/UI/rotate-right.png
