@@ -98,6 +98,7 @@ Todas las unidades que cumplan con los 3 filtros anteriores se encontrarán en u
 * `maxHealth`: salud total de las unidades.
 
 Por ultimo está el parámetro `order` que cuenta con dos modos:
+
 * con valor `1`: ordenará la lista de unidades de manera ascendente.
 * con valor `0`: ordenará la lista de unidades de manera descendente, específicamente, la invertirá.
 

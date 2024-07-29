@@ -42,5 +42,3 @@ set tipo-de-unidad @mega
 ```
 
 ![[menu-variables.png]]
-
-Visualización del menú Variables con el código anterior
