@@ -11,6 +11,7 @@ theme:
       - navigation.tracking
       - navigation.top
       - navigation.footer
+    favicon: images/UI/favicon.svg
     icon:
       logo: octicons/cpu-16
     #  previous: images/UI/rotate-left.png
