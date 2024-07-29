@@ -15,7 +15,6 @@ Operation le permite al procesador realizar operaciones matemáticas y guardar s
 ### Suma `+` `op add result a b`
 
 Retorna la suma de `a` y `b`.
-
 ### Resta `-` `op sub result a b`
 
 Retorna la resta de `a` y `b`.

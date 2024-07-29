@@ -80,12 +80,10 @@ nav:
   - Inicio: index.md
   - Como navegar en la guía: navegar-en-la-guia.md
   - ¿Que es la lógica?: 1-que-es-la-logica.md
-  - La instrucción: 
-    - Concepto de instrucción: 2-concepto-de-instruccion.md
-  - Como escribir código: 
-    - 3-como-escribir-codigo.md
-    - Trabajando con el editor visual: 3.1-trabajando-con-el-editor-visual.md
-    - Trabjando con el editor manual: 3.2-trabajando-con-el-editor-manual.md
+  - Concepto de instrucción: 2-concepto-de-instruccion.md
+  - Como escribir código: 3-como-escribir-codigo.md 
+  - Trabajando con el editor visual: 3.1-trabajando-con-el-editor-visual.md
+  - Trabjando con el editor manual: 3.2-trabajando-con-el-editor-manual.md
   - Limitaciones de la lógica: 4-limitaciones-de-la-logica.md
   - Variables y constantes: 5-variables-y-constantes.md
   - Tipos de datos: 6-tipos-de-datos.md

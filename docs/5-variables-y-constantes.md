@@ -4,11 +4,12 @@
  
 ### Concepto de variable
 
-Para comenzar, debemos entender el concepto de variable, las variables son "contenedores de información" que se guardan en memoria, en este caso, en un procesador. Estas deben tener un nombre para identificarlas, usarlas y modificaras. Estas además pueden contener distintos tipos de información o datos. Dentro del juego, una variable puede contener la información de una unidad, el estado de un bloque, un numero tan simple como una coordenada, o texto,consulta [[Tipos de datos]] para ver todos los tipos disponibles. La función principal de estas es hacer flexibles las instrucciones, por ejemplo, si le ordenas a una unidad moverse a la posición 100, 100 solo podrá moverse a esa posición, pero si en otro caso usar variables como `x` y `y`, que son modificadas por el procesador, entonces la unidad podrá moverse a donde el procesador le indique.
+Para comenzar, debemos entender el concepto de variable, las variables son "contenedores de información" que se guardan en memoria, en este caso, en un procesador. Estas deben tener un nombre para identificarlas, usarlas y modificaras. Estas además pueden contener distintos tipos de información o datos. Dentro del juego, una variable puede contener la información de una unidad, el estado de un bloque, un numero tan simple como una coordenada, o texto,consulta [[6-tipos-de-datos|tipos de datos]] para ver todos los tipos disponibles. La función principal de estas es hacer flexibles las instrucciones, por ejemplo, si le ordenas a una unidad moverse a la posición 100, 100 solo podrá moverse a esa posición, pero si en otro caso usar variables como `x` y `y`, que son modificadas por el procesador, entonces la unidad podrá moverse a donde el procesador le indique.
 
 ### Reglas en variables
 
 Para un buen uso de las mismas, las variables tiene que seguir una serie de reglas:
+
 * El nombre debe ser un nombre valido, no puede ser un número, ejemplo: `123`.
 * Este nombre no debe repetirse, si esto se hace el valor que la variable tenia se sobrescribirá, en algunas ocasiones será algo que quieres, pero en caso contrario, no lo hagas, ejemplo: si tu variable `coordenada_x` tenía un valor de `100` y vuelves a definir la variable la cadena `"frog"`, `coordenada_x` tendrá ese nuevo valor.  
 * El nombre no puede contener espacios vacíos, puedes hacer uso de guión medio, bajo, o usar mayúsculas como separación de palabras, ejemplo: `oreX`, `ore_x`, `ore-x`.
@@ -37,7 +38,6 @@ Crea una instrucción set y agrega el nombre de tu variable, además del valor q
 ### Concepto de constante
 
 Otro concepto importante son las constantes, estas al igual que las variables son contenedores de información, solo que tienen un valor que no puede ser cambiado por el usuario, por ejemplo en el mundo real tenemos a la constante de la gravedad, o el numero PI.
-
 
 ## Constantes y variables propias del procesador
 
