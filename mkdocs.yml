@@ -12,10 +12,10 @@ theme:
       - navigation.top
       - navigation.footer
     logo: octicons/cpu-16
-    icon:
-      previous: images/UI/rotate-left.png
-      next: images/UI/rotate-right.png
-      search: images/UI/search.png
+    #icon:
+    #  previous: images/UI/rotate-left.png
+    #  next: images/UI/rotate-right.png
+    #  search: images/UI/search.png
     palette: 
 
     # Light mode
