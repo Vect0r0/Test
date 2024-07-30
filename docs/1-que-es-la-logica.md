@@ -21,24 +21,32 @@ Para usar la lógica dentro del juego, se cuenta con un conjunto de bloques espe
 
 ![[categoria-logica.png]]
 
-`Bloque de mensaje`:
-a
-`Interruptor`:
-b
-`Microprocesador`:
-c
-`Procesador lógico`:
-d
-`Hiperprocesador`:
-e
-`Unidad de memoria`:
-f
-`Servidor de memoria`:
-g
-`Pantalla lógica`: 
-h
-`Pantalla lógica grande`: 
-i
+`Bloque de mensaje`
+
+: a
+`Interruptor`
+
+: b
+`Microprocesador`
+
+: c
+`Procesador lógico`
+
+: d
+`Hiperprocesador`
+
+: e
+`Unidad de memoria`
+
+: f
+`Servidor de memoria`
+
+: g
+`Pantalla lógica`
+
+: h
+`Pantalla lógica grande`
+: i
 `Lorem ipsum dolor sit amet`
 
 :   Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus
