@@ -24,42 +24,38 @@ Para usar la lógica dentro del juego, se cuenta con un conjunto de bloques espe
 `Bloque de mensaje`
 
 : a
+
 `Interruptor`
 
 : b
+
 `Microprocesador`
 
 : c
+
 `Procesador lógico`
 
 : d
+
 `Hiperprocesador`
 
 : e
+
 `Unidad de memoria`
 
 : f
+
 `Servidor de memoria`
 
 : g
+
 `Pantalla lógica`
 
 : h
+
 `Pantalla lógica grande`
+
 : i
-`Lorem ipsum dolor sit amet`
-
-:   Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus
-    tellus non sem sollicitudin, quis rutrum leo facilisis.
-
-`Cras arcu libero`
-
-:   Aliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex. Proin
-    ut eros sed sapien ullamcorper consequat. Nunc ligula ante.
-
-    Duis mollis est eget nibh volutpat, fermentum aliquet dui mollis.
-    Nam vulputate tincidunt fringilla.
-    Nullam dignissim ultrices urna non auctor.
 
 ## Limitaciones de la lógica
 
