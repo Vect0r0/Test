@@ -30,3 +30,78 @@
 	- - [ ] Instrucción print
 	
 - - [ ] Instrucción Draw
+
+- [x] Introducción.
+	* [x] Objetivo de la guía.
+- [x] ¿Que es la lógica?
+	* [x] Funciones de la lógica.
+	* [ ] Acceder a la lógica dentro del juego.
+	* [x] Limitaciones de la lógica.
+* [ ] Concepto de instrucción.
+	* [ ] Entrada de datos.
+	* [ ] Salida de datos.
+* [x] Como escribir código.
+	* [x] Trabajando con el editor visual.
+	* [x] Trabajando con el editor manual -comentarios.
+* [ ] Variables y constantes.
+* [ ] Tipos de datos.
+* [ ] Instrucciones de operación.
+* [ ] Instrucciones de control de flujo.
+	* [ ] Definición de flujo.
+	* [ ] Instrucción Jump -condicionales -funcionalidad.
+	* [ ] Creación de bucles con jump.
+* [ ] Instrucciones de entrada y salida.
+* [ ] Instrucciones de control de bloques.
+	* [ ] Sensor -uso en unidades -podemos sacarlo.
+* [ ] Instrucciones de control de unidades.
+* [ ] Buenas prácticas.
+	* [ ] Optimizaciones comunes .
+* [ ] Ejemplos prácticos y proyectos.
+	* [ ] Sistemas comunes.
+	* [ ] Retos.
+* [ ] Recursos adicionales.
+
+
+	Introducción e importancia
+	 Objetivo de la guía
+
+Fundamentos básicos
+* Acceder al sistema y usarlo
+* Crear secuencia de instrucciones
+* Sintaxis básica
+	*  Variables
+	* Operaciones
+	* Comentarios
+Control de flujo
+* Condicioneales 
+	* jump con etiquetas
+	* Estados 
+* Creación de bucles 
+* Operadores lógicos
+
+Manejo de datos
+* Tipos de memoria
+* Leer y escribir datos
+* Uso avanzado de variables y creación de constantes
+
+Interacción con el mundo 
+* Usando sensor para obtener información.
+* Control de unidades.
+* Interacción con bloques
+
+Automatización compleja
+* Sistemas de defensa automática
+* Gestión de recursos
+* Redes lógicas avanzadas
+
+Optimización y buenas prácticas
+* Depurar y resolver problemas
+* Optimizar el código
+
+Ejemplos prácticos y proyectos
+* Proyectos de ejemplo
+* Retos y ejercicios
+
+Recursos adicionales
+* Documentación y herramientas
+* Comunidad y soporte
