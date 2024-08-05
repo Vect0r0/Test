@@ -23,39 +23,39 @@ Para usar la lógica dentro del juego, se cuenta con un conjunto de bloques espe
 
 `Bloque de mensaje`
 
-: a
+: Permite mostrar información en forma de texto.
 
 `Interruptor`
 
-: b
+: Se enciende y se apaga en base a la entrada del jugador.
 
 `Microprocesador`
 
-: c
+: El bloque más importante en la lógica, es el cerebro ya que ahí se ejecuta, se coordina y se controla todo.
 
 `Procesador lógico`
 
-: d
+: Una versión mejorada del microprocesador, con más rango y velocidad.
 
 `Hiperprocesador`
 
-: e
+: Versión mejorada del procesador lógico, con mucho más rango y velocidad, requiere refrigerante para funcionar.
 
 `Unidad de memoria`
 
-: f
+: Permite almacenar información en forma de números, con capacidad máxima de 64 unidades.
 
 `Servidor de memoria`
 
-: g
+: Versión mejorada de la unidad de memoria, con capacidad máxima de 512 unidades.
 
 `Pantalla lógica`
 
-: h
+: Permite mostrar información o figuras de manera gráfica, con una cantidad de pixeles de 80 * 80.
 
 `Pantalla lógica grande`
 
-: i
+: Versión mejorada de la pantalla lógica, con una cantidad de pixeles de 176 * 176.
 
 ## Limitaciones de la lógica
 

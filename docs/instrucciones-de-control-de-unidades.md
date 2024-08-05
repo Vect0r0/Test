@@ -6,7 +6,6 @@ Las instrucciones de control de unidades permiten realizar acciones relacionadas
 
 Esta instrucción vinculará la unidad especificada al procesador, la unidad especificada se guardará dentro de la variable de procesador `@unit`. Después de vinculada, las demás instrucciones relacionadas al control de unidades se realizarán a esta unidad. **El procesador solo vincula una unidad a la vez**.
 
-
 ## Unit Control
 
 Esta instrucción le indicará a la unidad realizar una acción con las capacidades de la unidad (disparar, moverse, volar etc) de una larga lista:
@@ -112,12 +111,22 @@ Esta instrucción localizará haciendo uso de la unidad vinculada estructuras u 
 
 Permitirá buscar vetas de minerales en el mapa, deberás seleccionar el mineral que la unidad debe buscar y te dará las coordenadas de la misma, además de una variable `found` que será `true` si este existe en el mapa, de otra manera `false`.
 
+![[Pasted image 20240731225640.png]]
 ### Construcción `building`
 
 Permitirá buscar construcciones dentro del mapa 
+
+
+![[Pasted image 20240731225656.png]]
+![[Pasted image 20240731225722.png]]
+![[Pasted image 20240731225740.png]]
+![[Pasted image 20240731225752.png]]
 ### Punto de aparición `spawn`
 
-
+Permitirá buscar puntos de aparición del enemigo, o núcleos en el caso de los mapas de ataque.
 ### Bloque dañado `damaged`
+
+Permitirá buscar bloques dañados aliados.
+
 
 
