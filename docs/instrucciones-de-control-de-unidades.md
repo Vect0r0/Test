@@ -14,7 +14,7 @@ Esta instrucción le indicará a la unidad realizar una acción con las capacida
 
 ### Detenerse `stop`
 
-### Moverse `move` `ucontrol move x y`
+### Moverse `move` `ucontrol move x(number) y(number)`
 
 Moverá a la unidad a las coordenadas `x` `y` especificadas. Esto lo hará en linea recta sin considerar obstáculos o que sea o no posición valida.
 ### Aproximarse `approach` `ucontrol approach x y range`
@@ -114,8 +114,20 @@ Permitirá buscar vetas de minerales en el mapa, deberás seleccionar el mineral
 ![[Pasted image 20240731225640.png]]
 ### Construcción `building`
 
-Permitirá buscar construcciones dentro del mapa 
+Permitirá buscar construcciones dentro del mapa, cuenta con distintos parámetros para realizar la búsqueda, los cuales se muestran debajo:
 
+`Group` o `Grupo` especificará cual es el grupo del bloque al que se quiere acceder, en el tenemos los siguientes:
+
+* `core` buscará núcleos
+* `storage` buscará almacenes o contenedores.
+* `generator` buscará bloques que generen energía.
+* `turret` buscará torretas.
+* `factory` buscará fabricas.
+* `repair` buscará bloques que reparan unidades.
+* `battery` buscará baterías.
+* `reactor` buscará reactores.
+
+Si `enemy` se establece como `true`, buscará solo bloques enemigos, `outX` y `outY` son las coordenadas donde se encuentra el bloque, además la variable `found`será `true` si existe en el mapa esa construcción, `false` de otra manera.
 
 ![[Pasted image 20240731225656.png]]
 ![[Pasted image 20240731225722.png]]
@@ -123,10 +135,8 @@ Permitirá buscar construcciones dentro del mapa
 ![[Pasted image 20240731225752.png]]
 ### Punto de aparición `spawn`
 
-Permitirá buscar puntos de aparición del enemigo, o núcleos en el caso de los mapas de ataque.
+Permitirá buscar puntos de aparición del enemigo, o núcleos en el caso de los mapas de ataque. `outX` y `outY` serán las coordenadas donde este se encuentra, `found` será `true` si existe en el mundo y `building` será el núcleo correspondiente en el caso que sea uno.
 ### Bloque dañado `damaged`
 
-Permitirá buscar bloques dañados aliados.
-
-
+Permitirá buscar bloques dañados aliados. `outX` y `outY` serán las coordenadas donde este se encuentra, `found` será `true` si existe en el mundo y `building` será el bloque dañado correspondiente.
 

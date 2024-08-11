@@ -20,7 +20,7 @@
 	* [x] [[instrucciones-y-concepto-de-control-de-flujo#Instrucciones|Instrucciones de control de flujo y jump]]
 	* [ ] Creación de bucles con jump.
 * [ ] Instrucciones de entrada y salida.
-* [ ] Instrucciones de control de bloques.
+* [ ] [[instrucciones-de-control-de-bloques|Instrucciones de control de bloques.]]
 	* [ ] Sensor -uso en unidades -podemos sacarlo.
 * [ ] [[instrucciones-de-control-de-unidades|Instrucciones de control de unidades.]]
 * [ ] Buenas prácticas.

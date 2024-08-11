@@ -32,8 +32,12 @@ Crea una instrucción set y agrega el nombre de tu variable, además del valor q
 
 [[Imagen]]
 
-### Conversión implícita de valores (rellenar)
- 
+### Conversión implícita de valores
+
+Esto implica la conversión de un valor a otro, para adecuar los valores de entrada a las instrucciones.
+
+Si una instrucción usa un `Objeto` y se le ingresa un `Número`, se convertirá en `null`, si necesita un `Número` y se le ingresa un `Objeto`, este será convertido a 1.
+
 ## Constantes
 ### Concepto de constante
 
@@ -67,8 +71,9 @@ Hace referencia al índice de la próxima instrucción a ejecutarse, el indice c
 #### *@links* `constante` `numero`
 
 Hace referencia a la cantidad de construcciones vinculadas al procesador. Puede usarse para recorrer cada una de estas y realizar acciones.
-#### `constante` `numero`
+#### `constante` `construcción`
 
+Estas son multiples constantes, una por cada construcción vinculada al procesador, son removidas cuando una construcción es desvinculada o vinculada al procesador, los nombres de las mismas se componen del nombre interno de la construcción, además de `n` que inicia en 1 e incrementa con cada construcción del mismo tipo que se vincule, algo como la enésima construcción.
 
 ### Relacionadas a las matemáticas
 

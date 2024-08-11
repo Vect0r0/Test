@@ -89,7 +89,7 @@ Retornará el valor máximo de entre los valores `a` y `b`, por ejemplo, si se u
 
 ## Lookup
 
-Lookup le permite al procesador obtener el tipo de dato de un item/líquido/unidad/bloque haciendo uso de un indice. Para obtener el numero total de estos tipos puedes hacer uso de `@blockCount` para bloques, `@unitCount` para unidades, `@itemCount` para items y `@liquidCount` para líquidos. Estos valores pueden usarse en conjunto con instrucciones jump para crear un bucle y revisar cada uno de estos.
+Lookup le permite al procesador obtener el tipo de dato de un item/líquido/unidad/bloque haciendo uso de un indice. Básicamente a cada contenido del juego se le asigna un número para distintos usos. Para obtener el numero total de estos tipos puedes hacer uso de `@blockCount` para bloques, `@unitCount` para unidades, `@itemCount` para items y `@liquidCount` para líquidos. Estos valores pueden usarse en conjunto con instrucciones jump para crear un bucle y revisar cada uno de estos. Por ejemplo, al usar `lookup` de bloques en el indice `1` obtendremos el tipo de dato `@duo`.
 
 ## Pack Color
 
