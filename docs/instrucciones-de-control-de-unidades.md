@@ -1,10 +1,10 @@
 # Instrucciones de control de unidades
 
-Las instrucciones de control de unidades permiten realizar acciones relacionadas a las unidades, hacer que ataquen, se muevan, disparen, tomen objetos etc.
+Las instrucciones de control de unidades permiten realizar acciones relacionadas a las unidades, hacer que ataquen, se muevan, disparen, tomen objetos etc. El usar estas instrucciones a excepción de `Unit Bind` causará que la unidad deje de hacer su comportamiento normal, los monos dejarán de minar por su cuenta, al igual que los poly dejarán de ayudarte a construir, una vez desvinculados volverán a sus acciones.
 
 ## Unit Bind
 
-Esta instrucción vinculará la unidad especificada al procesador, la unidad especificada se guardará dentro de la variable de procesador `@unit`. Después de vinculada, las demás instrucciones relacionadas al control de unidades se realizarán a esta unidad. **El procesador solo vincula una unidad a la vez**.
+Esta instrucción vinculará la unidad especificada al procesador, la unidad especificada se guardará dentro de la constante de procesador `@unit`. Después de vinculada, las demás instrucciones relacionadas al control de unidades se realizarán a esta unidad. **El procesador solo vincula una unidad a la vez**, y recorrerá una por una las unidades de este tipo hasta regresar a la primera.
 
 ## Unit Control
 

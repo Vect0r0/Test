@@ -78,18 +78,17 @@ extra_javascript:
 
 nav:
   - Inicio: index.md
-  - Como navegar en la guía: navegar-en-la-guia.md
-  - ¿Que es la lógica?: 1-que-es-la-logica.md
-  - Concepto de instrucción: 2-concepto-de-instruccion.md
-  - Como escribir código: 3-como-escribir-codigo.md 
-  - Trabajando con el editor visual: 3.1-trabajando-con-el-editor-visual.md
-  - Trabjando con el editor manual: 3.2-trabajando-con-el-editor-manual.md
-  - Limitaciones de la lógica: 4-limitaciones-de-la-logica.md
-  - Variables y constantes: 5-variables-y-constantes.md
-  - Tipos de datos: 6-tipos-de-datos.md
+  - ¿Que es la lógica?: que-es-la-logica.md
+  - Concepto de instrucción: concepto-de-instruccion.md
+  - Como escribir código: como-escribir-codigo.md 
+  - Trabajando con el editor visual: trabajando-con-el-editor-visual.md
+  - Trabjando con el editor manual: trabajando-con-el-editor-manual.md
+  - Variables y constantes: variables-y-constantes.md
+  - Tipos de datos: tipos-de-datos.md
   - Instrucciones de operación: instrucciones-de-operacion.md
+  - Instrucciones y concepto de control de flujo: instrucciones-y-concepto-de-control-de-flujo.md
+  - Instrucciones de control de bloques: instrucciones-de-control-de-bloques.md
   - Instrucciones de control de unidades: instrucciones-de-control-de-unidades.md
-  - Flujo de ejecución: flujo-de-ejecucion.md
   - Comentarios: comentarios.md
-  - Contenido a agregar: contenido-a-agregar.md
+  - Contenido a agregar: 1-contenido-a-agregar.md
 

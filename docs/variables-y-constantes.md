@@ -4,7 +4,7 @@
  
 ### Concepto de variable
 
-Para comenzar, debemos entender el concepto de variable, las variables son "contenedores de información" que se guardan en memoria, en este caso, en un procesador. Estas deben tener un nombre para identificarlas, usarlas y modificaras. Estas además pueden contener distintos tipos de información o datos. Dentro del juego, una variable puede contener la información de una unidad, el estado de un bloque, un numero tan simple como una coordenada, o texto,consulta [[6-tipos-de-datos|tipos de datos]] para ver todos los tipos disponibles. La función principal de estas es hacer flexibles las instrucciones, por ejemplo, si le ordenas a una unidad moverse a la posición 100, 100 solo podrá moverse a esa posición, pero si en otro caso usar variables como `x` y `y`, que son modificadas por el procesador, entonces la unidad podrá moverse a donde el procesador le indique.
+Para comenzar, debemos entender el concepto de variable, las variables son "contenedores de información" que se guardan en memoria, en este caso, en un procesador. Estas deben tener un nombre para identificarlas, usarlas y modificaras. Estas además pueden contener distintos tipos de información o datos. Dentro del juego, una variable puede contener la información de una unidad, el estado de un bloque, un numero tan simple como una coordenada, o texto,consulta [[tipos-de-datos|tipos de datos]] para ver todos los tipos disponibles. La función principal de estas es hacer flexibles las instrucciones, por ejemplo, si le ordenas a una unidad moverse a la posición 100, 100 solo podrá moverse a esa posición, pero si en otro caso usar variables como `x` y `y`, que son modificadas por el procesador, entonces la unidad podrá moverse a donde el procesador le indique.
 
 ### Reglas en variables
 
@@ -64,7 +64,7 @@ Hace referencia a la coordenada `y` del procesador.
 Hace referencia a las instrucciones por tick que este procesador está realizando. Adicional a esto, existe otra medida llamada `tps` o ticks por segundo, que en situaciones normales suele ser de 60. 
 #### *@counter* `variable` `numero`
 
-Hace referencia al índice de la próxima instrucción a ejecutarse, el indice comienza en 0 y terminará hasta la ultima instrucción - 1, es decir, si el procesador cuenta con 10 instrucciones, el indice va de 0 a 9. [[flujo-de-ejecucion#^465195|Puede ser modificada por el usuario para conseguir comportamientos avanzados.]]
+Hace referencia al índice de la próxima instrucción a ejecutarse, el indice comienza en 0 y terminará hasta la ultima instrucción - 1, es decir, si el procesador cuenta con 10 instrucciones, el indice va de 0 a 9. [[instrucciones-y-concepto-de-control-de-flujo#Manipulación avanzada del flujo de ejecución|Puede ser modificada por el usuario para conseguir comportamientos avanzados.]]
 
 ### Relacionadas a las conexiones
 
