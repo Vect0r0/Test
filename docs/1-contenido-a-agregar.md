@@ -28,4 +28,4 @@
 * [ ] Ejemplos prácticos y proyectos.
 	* [ ] Sistemas comunes.
 	* [ ] Retos.
-* [ ] Recursos adicionales.
+* [ ] Recursos adicionales
