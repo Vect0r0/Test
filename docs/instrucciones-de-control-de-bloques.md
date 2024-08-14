@@ -29,17 +29,65 @@ Esta instrucción te permitirá modificar el estado de los bloques, cuenta con 5
 
 ### Enabled
 
-Establece si está activo o no `true` para activar, `false` para desactivar
+Establece si está activo o no `true` para activar, `false` para desactivar, si tienes activado los marcadores, podrás ver un recuadro color morado cuando un bloque haya sido desactivado vía lógica. 
 ### Shoot
+
+Ordenará a que coordenadas `x` `y` disparará una torreta, `shoot` se establece en `true` para disparar y en `false` para no hacer nada.
 
 ### Shootp
 
+Permite disparar a un bloque o unidad con predicción de movimiento `shoot` se establece en `true` para disparar y en  `false` para no hacer nada.
 ### Config
 
+Permite establecer distintas configuraciones entre los bloques, este comportamiento es visto en: 
+
+* Clasificadores, donde podrás establecer el material a filtrar, ejemplo: `@copper`.
+* Fabricas de unidades, donde podrás elegir que unidad se construirá.
+
+Y en otros bloques que cuenten con un menú desplegable de selección.
 ### Color
 
+Permite establecer el color en un iluminador, el color se maneja en rgb.
+
+## Radar
+
+Esta instrucción usará un bloque con rango como las torretas a manera de un radar para detectar unidades dentro del mismo, haciendo uso de diferentes filtros mostrados a continuación:
+
+* `any`: cualquier unidad.
+* `ally`: unidad aliada.
+* `enemy`: unidad enemiga.
+* `player`: unidad controlada por el jugador.
+* `attacker`: unidad que cuente con armas.
+* `boss`: unidad con el estado de jefe.
+* `flying`: unidad que actualmente esté en el aire.
+* `ground`: unidad que se encuentre en el suelo.
+
+Puedes hacer uso de 3 de estos filtros, los cuales seleccionas para especificar las unidades.
+
+Todas las unidades que cumplan con los 3 filtros anteriores se encontrarán en una especie de lista, esa lista se ordenará dependiendo del ordenamiento que selecciones, el cual cuenta con las siguientes opciones:
+
+* `distance`: distancia respecto a la unidad.
+* `health`: salud actual de las unidades.
+* `shield`: cantidad de escudo actual.
+* `armor`: puntos de armadura, puedes revisar si una unidad cuenta con esto en su información.
+* `maxHealth`: salud total de las unidades.
+
+Por ultimo está el parámetro `order` que cuenta con dos modos:
+
+* con valor `1`: ordenará la lista de unidades de manera ascendente.
+* con valor `0`: ordenará la lista de unidades de manera descendente, específicamente, la invertirá.
+
+La unidad resultante se almacenará en la variable `output` para su uso.
+
+## Sensor
+
+Este comando es de gran utilidad, te permite obtener propiedades de bloques y unidades, cosas como coordenadas, items, configuración, salud etc.
 Draw print flush 
 Get link
 Control 
 Radar
 Sensor
+
+## Draw flush
+
+## Print flush
