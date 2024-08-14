@@ -1,0 +1,1317 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="instrucciones-de-control-de-bloques.html">
+      
+      
+        <link rel="next" href="comentarios.html">
+      
+      
+      <link rel="icon" href="images/UI/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>Instrucciones de control de unidades - Guia Lógica ESP</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#instrucciones-de-control-de-unidades" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="index.html" title="Guia Lógica ESP" class="md-header__button md-logo" aria-label="Guia Lógica ESP" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.5.75V2h3V.75a.75.75 0 0 1 1.5 0V2h1.25c.966 0 1.75.784 1.75 1.75V5h1.25a.75.75 0 0 1 0 1.5H14v3h1.25a.75.75 0 0 1 0 1.5H14v1.25A1.75 1.75 0 0 1 12.25 14H11v1.25a.75.75 0 0 1-1.5 0V14h-3v1.25a.75.75 0 0 1-1.5 0V14H3.75A1.75 1.75 0 0 1 2 12.25V11H.75a.75.75 0 0 1 0-1.5H2v-3H.75a.75.75 0 0 1 0-1.5H2V3.75C2 2.784 2.784 2 3.75 2H5V.75a.75.75 0 0 1 1.5 0Zm5.75 11.75a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25ZM5.75 5h4.5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-.75.75h-4.5a.75.75 0 0 1-.75-.75v-4.5A.75.75 0 0 1 5.75 5Zm.75 4.5h3v-3h-3Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Guia Lógica ESP
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Instrucciones de control de unidades
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="purple"  aria-label="Cambia a modo obscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambia a modo obscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="deep-purple"  aria-label="Cambia a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambia a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Guia Lógica ESP" class="md-nav__button md-logo" aria-label="Guia Lógica ESP" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.5.75V2h3V.75a.75.75 0 0 1 1.5 0V2h1.25c.966 0 1.75.784 1.75 1.75V5h1.25a.75.75 0 0 1 0 1.5H14v3h1.25a.75.75 0 0 1 0 1.5H14v1.25A1.75 1.75 0 0 1 12.25 14H11v1.25a.75.75 0 0 1-1.5 0V14h-3v1.25a.75.75 0 0 1-1.5 0V14H3.75A1.75 1.75 0 0 1 2 12.25V11H.75a.75.75 0 0 1 0-1.5H2v-3H.75a.75.75 0 0 1 0-1.5H2V3.75C2 2.784 2.784 2 3.75 2H5V.75a.75.75 0 0 1 1.5 0Zm5.75 11.75a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25ZM5.75 5h4.5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-.75.75h-4.5a.75.75 0 0 1-.75-.75v-4.5A.75.75 0 0 1 5.75 5Zm.75 4.5h3v-3h-3Z"/></svg>
+
+    </a>
+    Guia Lógica ESP
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="que-es-la-logica.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Que es la lógica?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="concepto-de-instruccion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concepto de instrucción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="como-escribir-codigo.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como escribir código
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="trabajando-con-el-editor-visual.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trabajando con el editor visual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="trabajando-con-el-editor-manual.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trabjando con el editor manual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="variables-y-constantes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variables y constantes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tipos-de-datos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tipos de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="instrucciones-de-operacion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instrucciones de operación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="instrucciones-y-concepto-de-control-de-flujo.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instrucciones y concepto de control de flujo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="instrucciones-de-control-de-bloques.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instrucciones de control de bloques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Instrucciones de control de unidades
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="instrucciones-de-control-de-unidades.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Instrucciones de control de unidades
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unit-bind" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unit Bind
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unit Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unit Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inactivo-idle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inactivo idle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detenerse-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detenerse stop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moverse-move-ucontrol-move-xnumber-ynumber" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moverse move ucontrol move x(number) y(number)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aproximarse-approach-ucontrol-approach-x-y-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aproximarse approach ucontrol approach x y range
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encontrar-camino-pathfind-ucontrol-pathfind-x-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encontrar camino pathfind ucontrol pathfind x y
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encontrar-camino-automatico-autopathfind-ucontrol-autopathfind" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encontrar camino automático autoPathfind ucontrol autoPathfind
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propulsarse-boost-ucontrol-boost-enable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propulsarse boost ucontrol boost enable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disparar-a-posicion-target-ucontrol-target-x-y-shoot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disparar a posición target ucontrol target x y shoot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disparar-a-objetivo-targetp-ucontrol-targetp-unitblock-shoot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disparar a objetivo targetp ucontrol targetp unit/block shoot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soltar-item-itemdrop-ucontrol-itemdrop-to-amount" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soltar item itemDrop ucontrol itemDrop to amount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tomar-item-itemtake-ucontrol-itemtake-from-item-amount" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tomar item itemTake ucontrol itemTake from item amount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soltar-cargamento-paydrop-ucontrol-paydrop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soltar cargamento payDrop ucontrol payDrop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tomar-cargamento-paytake-ucontrol-paytake-takeunits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tomar cargamento payTake ucontrol payTake takeUnits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entrar-como-cargamento-payenter-ucontrol-payenter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrar como cargamento payEnter ucontrol payEnter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minar-mine-ucontrol-mine-x-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minar mine ucontrol mine x y
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#establecer-identificador-flag-ucontrol-flag-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Establecer identificador flag ucontrol flag flag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#construir-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      Construir build
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtener-bloque-getblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obtener bloque getBlock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dentro-de-within-ucontrol-within-x-y-radius-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dentro de within ucontrol within x y radius result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desvincular-unbind-ucontrol-unbind" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desvincular unbind ucontrol unbind
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-radar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unit Radar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-locate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unit Locate
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unit Locate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#minerales-ore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minerales ore
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#construccion-building" class="md-nav__link">
+    <span class="md-ellipsis">
+      Construcción building
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#punto-de-aparicion-spawn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Punto de aparición spawn
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloque-danado-damaged" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bloque dañado damaged
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="comentarios.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comentarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="1-contenido-a-agregar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contenido a agregar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unit-bind" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unit Bind
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unit Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unit Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inactivo-idle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inactivo idle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detenerse-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detenerse stop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moverse-move-ucontrol-move-xnumber-ynumber" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moverse move ucontrol move x(number) y(number)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aproximarse-approach-ucontrol-approach-x-y-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aproximarse approach ucontrol approach x y range
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encontrar-camino-pathfind-ucontrol-pathfind-x-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encontrar camino pathfind ucontrol pathfind x y
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encontrar-camino-automatico-autopathfind-ucontrol-autopathfind" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encontrar camino automático autoPathfind ucontrol autoPathfind
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propulsarse-boost-ucontrol-boost-enable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propulsarse boost ucontrol boost enable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disparar-a-posicion-target-ucontrol-target-x-y-shoot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disparar a posición target ucontrol target x y shoot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disparar-a-objetivo-targetp-ucontrol-targetp-unitblock-shoot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disparar a objetivo targetp ucontrol targetp unit/block shoot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soltar-item-itemdrop-ucontrol-itemdrop-to-amount" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soltar item itemDrop ucontrol itemDrop to amount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tomar-item-itemtake-ucontrol-itemtake-from-item-amount" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tomar item itemTake ucontrol itemTake from item amount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soltar-cargamento-paydrop-ucontrol-paydrop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soltar cargamento payDrop ucontrol payDrop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tomar-cargamento-paytake-ucontrol-paytake-takeunits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tomar cargamento payTake ucontrol payTake takeUnits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entrar-como-cargamento-payenter-ucontrol-payenter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrar como cargamento payEnter ucontrol payEnter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minar-mine-ucontrol-mine-x-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minar mine ucontrol mine x y
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#establecer-identificador-flag-ucontrol-flag-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Establecer identificador flag ucontrol flag flag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#construir-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      Construir build
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtener-bloque-getblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obtener bloque getBlock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dentro-de-within-ucontrol-within-x-y-radius-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dentro de within ucontrol within x y radius result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desvincular-unbind-ucontrol-unbind" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desvincular unbind ucontrol unbind
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-radar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unit Radar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-locate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unit Locate
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unit Locate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#minerales-ore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minerales ore
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#construccion-building" class="md-nav__link">
+    <span class="md-ellipsis">
+      Construcción building
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#punto-de-aparicion-spawn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Punto de aparición spawn
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloque-danado-damaged" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bloque dañado damaged
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="instrucciones-de-control-de-unidades">Instrucciones de control de unidades<a class="headerlink" href="#instrucciones-de-control-de-unidades" title="Permanent link">&para;</a></h1>
+<p>Las instrucciones de control de unidades permiten realizar acciones relacionadas a las unidades, hacer que ataquen, se muevan, disparen, tomen objetos etc. El usar estas instrucciones a excepción de <code>Unit Bind</code> causará que la unidad deje de hacer su comportamiento normal, los monos dejarán de minar por su cuenta, al igual que los poly dejarán de ayudarte a construir, una vez desvinculados volverán a sus acciones.</p>
+<h2 id="unit-bind">Unit Bind<a class="headerlink" href="#unit-bind" title="Permanent link">&para;</a></h2>
+<p>Esta instrucción vinculará la unidad especificada al procesador, la unidad especificada se guardará dentro de la constante de procesador <code>@unit</code>. Después de vinculada, las demás instrucciones relacionadas al control de unidades se realizarán a esta unidad. <strong>El procesador solo vincula una unidad a la vez</strong>, y recorrerá una por una las unidades de este tipo hasta regresar a la primera.</p>
+<h2 id="unit-control">Unit Control<a class="headerlink" href="#unit-control" title="Permanent link">&para;</a></h2>
+<p>Esta instrucción le indicará a la unidad realizar una acción con las capacidades de la unidad (disparar, moverse, volar etc) de una larga lista:</p>
+<h3 id="inactivo-idle">Inactivo <code>idle</code><a class="headerlink" href="#inactivo-idle" title="Permanent link">&para;</a></h3>
+<h3 id="detenerse-stop">Detenerse <code>stop</code><a class="headerlink" href="#detenerse-stop" title="Permanent link">&para;</a></h3>
+<h3 id="moverse-move-ucontrol-move-xnumber-ynumber">Moverse <code>move</code> <code>ucontrol move x(number) y(number)</code><a class="headerlink" href="#moverse-move-ucontrol-move-xnumber-ynumber" title="Permanent link">&para;</a></h3>
+<p>Moverá a la unidad a las coordenadas <code>x</code> <code>y</code> especificadas. Esto lo hará en linea recta sin considerar obstáculos o que sea o no posición valida.</p>
+<h3 id="aproximarse-approach-ucontrol-approach-x-y-range">Aproximarse <code>approach</code> <code>ucontrol approach x y range</code><a class="headerlink" href="#aproximarse-approach-ucontrol-approach-x-y-range" title="Permanent link">&para;</a></h3>
+<p>Aproximará a la unidad a las coordenadas <code>x</code> <code>y</code> especificadas de acuerdo al rango especificado.</p>
+<h3 id="encontrar-camino-pathfind-ucontrol-pathfind-x-y">Encontrar camino <code>pathfind</code> <code>ucontrol pathfind x y</code><a class="headerlink" href="#encontrar-camino-pathfind-ucontrol-pathfind-x-y" title="Permanent link">&para;</a></h3>
+<p>Moverá a la unidad a las coordenadas <code>x</code> <code>y</code> especificadas. Esto lo hará trazando un camino que tome en cuenta obstáculos y otras situaciones.</p>
+<h3 id="encontrar-camino-automatico-autopathfind-ucontrol-autopathfind">Encontrar camino automático <code>autoPathfind</code> <code>ucontrol autoPathfind</code><a class="headerlink" href="#encontrar-camino-automatico-autopathfind-ucontrol-autopathfind" title="Permanent link">&para;</a></h3>
+<p>Moverá la unidad al punto de aparición enemigo o núcleo enemigo mas cercano de manera automática. Tomando en cuenta el camino.</p>
+<h3 id="propulsarse-boost-ucontrol-boost-enable">Propulsarse <code>boost</code> <code>ucontrol boost enable</code><a class="headerlink" href="#propulsarse-boost-ucontrol-boost-enable" title="Permanent link">&para;</a></h3>
+<p>Propulsará a la unidad si el valor es <code>true</code> y si esta cuenta con la capacidad de hacerlo, de otro modo, bajará al suelo o no se elevará.</p>
+<h3 id="disparar-a-posicion-target-ucontrol-target-x-y-shoot">Disparar a posición <code>target</code> <code>ucontrol target x y shoot</code><a class="headerlink" href="#disparar-a-posicion-target-ucontrol-target-x-y-shoot" title="Permanent link">&para;</a></h3>
+<p>Apuntará a las coordenadas <code>x</code> <code>y</code> especificadas. Si <code>shoot</code> es <code>true</code> esta disparará, en caso contrario no hará nada.</p>
+<h3 id="disparar-a-objetivo-targetp-ucontrol-targetp-unitblock-shoot">Disparar a objetivo <code>targetp</code> <code>ucontrol targetp unit/block shoot</code><a class="headerlink" href="#disparar-a-objetivo-targetp-ucontrol-targetp-unitblock-shoot" title="Permanent link">&para;</a></h3>
+<p>Disparará a un objetivo especificado en <code>unit/block</code> con predicción de movimiento incluido(si se especificó una unidad). Si <code>shoot</code> es <code>true</code> esta disparará, en caso contrario no hará nada.</p>
+<h3 id="soltar-item-itemdrop-ucontrol-itemdrop-to-amount">Soltar item <code>itemDrop</code> <code>ucontrol itemDrop to amount</code><a class="headerlink" href="#soltar-item-itemdrop-ucontrol-itemdrop-to-amount" title="Permanent link">&para;</a></h3>
+<p>Soltará al objetivo especificado en <code>to</code> (ya sea un núcleo, torreta, boveda, etc.) la cantidad de items especificadas en <code>amount</code>. Como dato adicional, puedes poner <code>@air</code> en <code>to</code> para desechar los items.</p>
+<h3 id="tomar-item-itemtake-ucontrol-itemtake-from-item-amount">Tomar item <code>itemTake</code> <code>ucontrol itemTake from item amount</code><a class="headerlink" href="#tomar-item-itemtake-ucontrol-itemtake-from-item-amount" title="Permanent link">&para;</a></h3>
+<p>Tomará del objetivo especificado en <code>from</code> (ya sea un núcleo, torreta, boveda, etc.) un <code>item</code>, la cantidad especifica se establece en <code>amount</code>.</p>
+<h3 id="soltar-cargamento-paydrop-ucontrol-paydrop">Soltar cargamento <code>payDrop</code> <code>ucontrol payDrop</code><a class="headerlink" href="#soltar-cargamento-paydrop-ucontrol-paydrop" title="Permanent link">&para;</a></h3>
+<p>(cargamento siendo bloques o unidades dentro de unidades) </p>
+<h3 id="tomar-cargamento-paytake-ucontrol-paytake-takeunits">Tomar cargamento <code>payTake</code> <code>ucontrol payTake takeUnits</code><a class="headerlink" href="#tomar-cargamento-paytake-ucontrol-paytake-takeunits" title="Permanent link">&para;</a></h3>
+<p>(cargamento siendo bloques o unidades dentro de unidades)  Tomará el cargamento de su posición actual, si <code>takeUnits</code> es <code>true</code>, la unidad tomará solo las unidades en esa posición, en caso contrario, solo tomará los bloques.</p>
+<h3 id="entrar-como-cargamento-payenter-ucontrol-payenter">Entrar como cargamento <code>payEnter</code> <code>ucontrol payEnter</code><a class="headerlink" href="#entrar-como-cargamento-payenter-ucontrol-payenter" title="Permanent link">&para;</a></h3>
+<p>(cargamento siendo bloques o unidades dentro de unidades) Entrará como cargamento a bloques que se encuentren en su posición actual y que lo admitan (reconstructores, desconstructores y catapultas).</p>
+<h3 id="minar-mine-ucontrol-mine-x-y">Minar <code>mine</code> <code>ucontrol mine x y</code><a class="headerlink" href="#minar-mine-ucontrol-mine-x-y" title="Permanent link">&para;</a></h3>
+<p>Minará materiales en las coordenadas <code>x</code> <code>y</code> especificadas, puedes ver si una unidad puede minar un mineral en su información.</p>
+<h3 id="establecer-identificador-flag-ucontrol-flag-flag">Establecer identificador <code>flag</code> <code>ucontrol flag flag</code><a class="headerlink" href="#establecer-identificador-flag-ucontrol-flag-flag" title="Permanent link">&para;</a></h3>
+<p>Establecerá una <code>flag</code> o identificador en la unidad, es básicamente un número que la unidad tendrá y que puede ser utilizada para un mejor manejo de unidades e identificación.</p>
+<h3 id="construir-build">Construir <code>build</code><a class="headerlink" href="#construir-build" title="Permanent link">&para;</a></h3>
+<h3 id="obtener-bloque-getblock">Obtener bloque <code>getBlock</code><a class="headerlink" href="#obtener-bloque-getblock" title="Permanent link">&para;</a></h3>
+<h3 id="dentro-de-within-ucontrol-within-x-y-radius-result">Dentro de <code>within</code> <code>ucontrol within x y radius result</code><a class="headerlink" href="#dentro-de-within-ucontrol-within-x-y-radius-result" title="Permanent link">&para;</a></h3>
+<p>Detectará si la unidad vinculada se encuentra dentro del rango delimitado por las coordenadas <code>x</code> <code>y</code> y el <code>radius</code>. El resultado se almacenará en <code>result</code>.</p>
+<h3 id="desvincular-unbind-ucontrol-unbind">Desvincular <code>unbind</code> <code>ucontrol unbind</code><a class="headerlink" href="#desvincular-unbind-ucontrol-unbind" title="Permanent link">&para;</a></h3>
+<p>idle stop move approach pathfind autopathfind boost target targetp itemDrop itemTake payDrop payTake payEnter mine flag build getBlock within unbind</p>
+<h2 id="unit-radar">Unit Radar<a class="headerlink" href="#unit-radar" title="Permanent link">&para;</a></h2>
+<p>Esta instrucción usará el rango de la unidad vinculada como un radar para detectar unidades dentro del mismo, haciendo uso de diferentes filtros mostrados a continuación:</p>
+<ul>
+<li><code>any</code>: cualquier unidad.</li>
+<li><code>ally</code>: unidad aliada.</li>
+<li><code>enemy</code>: unidad enemiga.</li>
+<li><code>player</code>: unidad controlada por el jugador.</li>
+<li><code>attacker</code>: unidad que cuente con armas.</li>
+<li><code>boss</code>: unidad con el estado de jefe.</li>
+<li><code>flying</code>: unidad que actualmente esté en el aire.</li>
+<li><code>ground</code>: unidad que se encuentre en el suelo.</li>
+</ul>
+<p>Puedes hacer uso de 3 de estos filtros, los cuales seleccionas para especificar las unidades.</p>
+<p>Todas las unidades que cumplan con los 3 filtros anteriores se encontrarán en una especie de lista, esa lista se ordenará dependiendo del ordenamiento que selecciones, el cual cuenta con las siguientes opciones:</p>
+<ul>
+<li><code>distance</code>: distancia respecto a la unidad.</li>
+<li><code>health</code>: salud actual de las unidades.</li>
+<li><code>shield</code>: cantidad de escudo actual.</li>
+<li><code>armor</code>: puntos de armadura, puedes revisar si una unidad cuenta con esto en su información.</li>
+<li><code>maxHealth</code>: salud total de las unidades.</li>
+</ul>
+<p>Por ultimo está el parámetro <code>order</code> que cuenta con dos modos:</p>
+<ul>
+<li>con valor <code>1</code>: ordenará la lista de unidades de manera ascendente.</li>
+<li>con valor <code>0</code>: ordenará la lista de unidades de manera descendente, específicamente, la invertirá.</li>
+</ul>
+<p>La unidad resultante se almacenará en la variable <code>output</code> para su uso.</p>
+<h2 id="unit-locate">Unit Locate<a class="headerlink" href="#unit-locate" title="Permanent link">&para;</a></h2>
+<p>Esta instrucción localizará haciendo uso de la unidad vinculada estructuras u objetos de interés dentro del mapa, contiene 4 categorías de búsqueda:</p>
+<h3 id="minerales-ore">Minerales <code>ore</code><a class="headerlink" href="#minerales-ore" title="Permanent link">&para;</a></h3>
+<p>Permitirá buscar vetas de minerales en el mapa, deberás seleccionar el mineral que la unidad debe buscar y te dará las coordenadas de la misma, además de una variable <code>found</code> que será <code>true</code> si este existe en el mapa, de otra manera <code>false</code>.</p>
+<p><img alt="Pasted image 20240731225640.png" src="Pasted%20image%2020240731225640.png" /></p>
+<h3 id="construccion-building">Construcción <code>building</code><a class="headerlink" href="#construccion-building" title="Permanent link">&para;</a></h3>
+<p>Permitirá buscar construcciones dentro del mapa, cuenta con distintos parámetros para realizar la búsqueda, los cuales se muestran debajo:</p>
+<p><code>Group</code> o <code>Grupo</code> especificará cual es el grupo del bloque al que se quiere acceder, en el tenemos los siguientes:</p>
+<ul>
+<li><code>core</code> buscará núcleos</li>
+<li><code>storage</code> buscará almacenes o contenedores.</li>
+<li><code>generator</code> buscará bloques que generen energía.</li>
+<li><code>turret</code> buscará torretas.</li>
+<li><code>factory</code> buscará fabricas.</li>
+<li><code>repair</code> buscará bloques que reparan unidades.</li>
+<li><code>battery</code> buscará baterías.</li>
+<li><code>reactor</code> buscará reactores.</li>
+</ul>
+<p>Si <code>enemy</code> se establece como <code>true</code>, buscará solo bloques enemigos, <code>outX</code> y <code>outY</code> son las coordenadas donde se encuentra el bloque, además la variable <code>found</code>será <code>true</code> si existe en el mapa esa construcción, <code>false</code> de otra manera.</p>
+<p><img alt="Pasted image 20240731225656.png" src="Pasted%20image%2020240731225656.png" />
+<img alt="Pasted image 20240731225722.png" src="Pasted%20image%2020240731225722.png" />
+<img alt="Pasted image 20240731225740.png" src="Pasted%20image%2020240731225740.png" />
+<img alt="Pasted image 20240731225752.png" src="Pasted%20image%2020240731225752.png" /></p>
+<h3 id="punto-de-aparicion-spawn">Punto de aparición <code>spawn</code><a class="headerlink" href="#punto-de-aparicion-spawn" title="Permanent link">&para;</a></h3>
+<p>Permitirá buscar puntos de aparición del enemigo, o núcleos en el caso de los mapas de ataque. <code>outX</code> y <code>outY</code> serán las coordenadas donde este se encuentra, <code>found</code> será <code>true</code> si existe en el mundo y <code>building</code> será el núcleo correspondiente en el caso que sea uno.</p>
+<h3 id="bloque-danado-damaged">Bloque dañado <code>damaged</code><a class="headerlink" href="#bloque-danado-damaged" title="Permanent link">&para;</a></h3>
+<p>Permitirá buscar bloques dañados aliados. <code>outX</code> y <code>outY</code> serán las coordenadas donde este se encuentra, <code>found</code> será <code>true</code> si existe en el mundo y <code>building</code> será el bloque dañado correspondiente.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="instrucciones-de-control-de-bloques.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Instrucciones de control de bloques">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Instrucciones de control de bloques
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="comentarios.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Comentarios">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Comentarios
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "navigation.tracking", "navigation.top", "navigation.footer"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

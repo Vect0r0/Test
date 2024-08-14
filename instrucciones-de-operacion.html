@@ -1,0 +1,1565 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="tipos-de-datos.html">
+      
+      
+        <link rel="next" href="instrucciones-y-concepto-de-control-de-flujo.html">
+      
+      
+      <link rel="icon" href="images/UI/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>Instrucciones de operación - Guia Lógica ESP</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#instrucciones-de-operacion" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="index.html" title="Guia Lógica ESP" class="md-header__button md-logo" aria-label="Guia Lógica ESP" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.5.75V2h3V.75a.75.75 0 0 1 1.5 0V2h1.25c.966 0 1.75.784 1.75 1.75V5h1.25a.75.75 0 0 1 0 1.5H14v3h1.25a.75.75 0 0 1 0 1.5H14v1.25A1.75 1.75 0 0 1 12.25 14H11v1.25a.75.75 0 0 1-1.5 0V14h-3v1.25a.75.75 0 0 1-1.5 0V14H3.75A1.75 1.75 0 0 1 2 12.25V11H.75a.75.75 0 0 1 0-1.5H2v-3H.75a.75.75 0 0 1 0-1.5H2V3.75C2 2.784 2.784 2 3.75 2H5V.75a.75.75 0 0 1 1.5 0Zm5.75 11.75a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25ZM5.75 5h4.5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-.75.75h-4.5a.75.75 0 0 1-.75-.75v-4.5A.75.75 0 0 1 5.75 5Zm.75 4.5h3v-3h-3Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Guia Lógica ESP
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Instrucciones de operación
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="purple"  aria-label="Cambia a modo obscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambia a modo obscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="deep-purple"  aria-label="Cambia a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambia a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Guia Lógica ESP" class="md-nav__button md-logo" aria-label="Guia Lógica ESP" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.5.75V2h3V.75a.75.75 0 0 1 1.5 0V2h1.25c.966 0 1.75.784 1.75 1.75V5h1.25a.75.75 0 0 1 0 1.5H14v3h1.25a.75.75 0 0 1 0 1.5H14v1.25A1.75 1.75 0 0 1 12.25 14H11v1.25a.75.75 0 0 1-1.5 0V14h-3v1.25a.75.75 0 0 1-1.5 0V14H3.75A1.75 1.75 0 0 1 2 12.25V11H.75a.75.75 0 0 1 0-1.5H2v-3H.75a.75.75 0 0 1 0-1.5H2V3.75C2 2.784 2.784 2 3.75 2H5V.75a.75.75 0 0 1 1.5 0Zm5.75 11.75a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25ZM5.75 5h4.5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-.75.75h-4.5a.75.75 0 0 1-.75-.75v-4.5A.75.75 0 0 1 5.75 5Zm.75 4.5h3v-3h-3Z"/></svg>
+
+    </a>
+    Guia Lógica ESP
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="que-es-la-logica.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Que es la lógica?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="concepto-de-instruccion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concepto de instrucción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="como-escribir-codigo.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como escribir código
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="trabajando-con-el-editor-visual.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trabajando con el editor visual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="trabajando-con-el-editor-manual.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trabjando con el editor manual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="variables-y-constantes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variables y constantes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tipos-de-datos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tipos de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Instrucciones de operación
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="instrucciones-de-operacion.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Instrucciones de operación
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suma-op-add-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suma + op add result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resta-op-sub-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resta - op sub result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiplicacion-op-mul-result-ab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiplicación * op mul result ab
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#division-normal-op-div-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      División normal / op div result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#division-entera-op-idiv-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      División entera // op idiv result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modulo-op-mod-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modulo % op mod result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#potencia-op-pow-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Potencia ^ op pow result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparativa-igual-op-equal-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparativa igual == op equal result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#negacion-not-op-notequal-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Negación not op notEqual result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparativa-y-and-op-land-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparativa Y and op land result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#menor-que-op-lessthan-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Menor que &lt; op lessThan result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#menor-e-igual-op-lessthaneq-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Menor e igual &lt;= op lessThanEq result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mayor-que-op-greaterthan-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mayor que &gt; op greaterThan result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mayor-e-igual-op-greaterthaneq-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mayor e igual &gt;= op greaterThanEq result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#igualdad-estricta-op-strictequal-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Igualdad estricta === op strictEqual result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bitshift-izquierda-op-shl-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bitshift Izquierda « op shl result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bitshift-derecha-op-shr-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bitshift derecha » op shr result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparativa-or-or-op-or-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparativa or or op or result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparativa-b-and-b-and-op-and-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparativa b-and b-and op and result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operacion-xor-xor-op-xor-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operación xor xor op xor result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flip-de-bits-flip-op-not-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flip de bits flip op not result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimo-min-op-min-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mínimo min op min result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximo-max-op-max-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Máximo max op max result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#angulo-angle-op-angle-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ángulo angle op angle result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencia-de-angulos-angle-diff-op-anglediff-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diferencia de ángulos angle diff op angleDiff result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#longitud-de-vector-len-op-len-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Longitud de vector len op len result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruido-2d-noise-op-noise-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ruido 2d noise op noise result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valor-absoluto-abs-op-abs-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valor absoluto abs op abs result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logaritmo-log-op-log-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logaritmo log op log result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logaritmo-base-10-log10-op-log10-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logaritmo base 10 log10 op log10 result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redondeo-a-menor-floor-op-floor-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redondeo a menor floor op floor result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redondeo-a-mayor-ceil-op-ceil-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redondeo a mayor ceil op ceil result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raiz-cuadrada-op-sqrt-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Raíz cuadrada * op sqrt result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numero-random-sqrt-op-rand-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numero random sqrt op rand result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seno-sin-op-sin-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seno sin op sin result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coseno-cos-op-cos-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coseno cos op cos result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tangente-tan-op-tan-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tangente tan op tan result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arcoseno-asin-op-asin-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arcoseno asin op asin result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arcocoseno-acos-op-acos-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arcocoseno acos op acos result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arcotangente-atan-op-atan-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arcotangente atan op atan result a
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lookup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lookup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pack-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pack Color
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="instrucciones-y-concepto-de-control-de-flujo.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instrucciones y concepto de control de flujo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="instrucciones-de-control-de-bloques.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instrucciones de control de bloques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="instrucciones-de-control-de-unidades.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instrucciones de control de unidades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="comentarios.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comentarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="1-contenido-a-agregar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contenido a agregar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suma-op-add-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suma + op add result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resta-op-sub-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resta - op sub result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiplicacion-op-mul-result-ab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiplicación * op mul result ab
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#division-normal-op-div-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      División normal / op div result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#division-entera-op-idiv-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      División entera // op idiv result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modulo-op-mod-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modulo % op mod result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#potencia-op-pow-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Potencia ^ op pow result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparativa-igual-op-equal-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparativa igual == op equal result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#negacion-not-op-notequal-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Negación not op notEqual result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparativa-y-and-op-land-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparativa Y and op land result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#menor-que-op-lessthan-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Menor que &lt; op lessThan result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#menor-e-igual-op-lessthaneq-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Menor e igual &lt;= op lessThanEq result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mayor-que-op-greaterthan-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mayor que &gt; op greaterThan result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mayor-e-igual-op-greaterthaneq-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mayor e igual &gt;= op greaterThanEq result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#igualdad-estricta-op-strictequal-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Igualdad estricta === op strictEqual result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bitshift-izquierda-op-shl-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bitshift Izquierda « op shl result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bitshift-derecha-op-shr-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bitshift derecha » op shr result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparativa-or-or-op-or-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparativa or or op or result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparativa-b-and-b-and-op-and-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparativa b-and b-and op and result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operacion-xor-xor-op-xor-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operación xor xor op xor result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flip-de-bits-flip-op-not-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flip de bits flip op not result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimo-min-op-min-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mínimo min op min result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximo-max-op-max-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Máximo max op max result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#angulo-angle-op-angle-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ángulo angle op angle result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencia-de-angulos-angle-diff-op-anglediff-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diferencia de ángulos angle diff op angleDiff result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#longitud-de-vector-len-op-len-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Longitud de vector len op len result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruido-2d-noise-op-noise-result-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ruido 2d noise op noise result a b
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valor-absoluto-abs-op-abs-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valor absoluto abs op abs result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logaritmo-log-op-log-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logaritmo log op log result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logaritmo-base-10-log10-op-log10-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logaritmo base 10 log10 op log10 result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redondeo-a-menor-floor-op-floor-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redondeo a menor floor op floor result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redondeo-a-mayor-ceil-op-ceil-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redondeo a mayor ceil op ceil result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raiz-cuadrada-op-sqrt-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Raíz cuadrada * op sqrt result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numero-random-sqrt-op-rand-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numero random sqrt op rand result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seno-sin-op-sin-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seno sin op sin result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coseno-cos-op-cos-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coseno cos op cos result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tangente-tan-op-tan-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tangente tan op tan result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arcoseno-asin-op-asin-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arcoseno asin op asin result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arcocoseno-acos-op-acos-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arcocoseno acos op acos result a
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arcotangente-atan-op-atan-result-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arcotangente atan op atan result a
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lookup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lookup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pack-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pack Color
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="instrucciones-de-operacion">Instrucciones de operación<a class="headerlink" href="#instrucciones-de-operacion" title="Permanent link">&para;</a></h1>
+<p>Las instrucciones de operación le permite realizar distintas acciones, estas dentro de las siguientes categorías.</p>
+<h2 id="set">Set<a class="headerlink" href="#set" title="Permanent link">&para;</a></h2>
+<p>Set le permite al procesador declarar una variable y asignarle un valor.</p>
+<p>[[posible-escritura-en-editor-manual]]</p>
+<h2 id="operation">Operation<a class="headerlink" href="#operation" title="Permanent link">&para;</a></h2>
+<p>Operation le permite al procesador realizar operaciones matemáticas y guardar su resultado,dichas operaciones van desde las básicas como la suma, hasta otras como las operaciones trigonométricas. Esta es la lista completa de operadores, además puedes observarlos presionando el botón de operación en la instrucción. </p>
+<h3 id="suma-op-add-result-a-b">Suma <code>+</code> <code>op add result a b</code><a class="headerlink" href="#suma-op-add-result-a-b" title="Permanent link">&para;</a></h3>
+<p>Retorna la suma de <code>a</code> y <code>b</code>.</p>
+<h3 id="resta-op-sub-result-a-b">Resta <code>-</code> <code>op sub result a b</code><a class="headerlink" href="#resta-op-sub-result-a-b" title="Permanent link">&para;</a></h3>
+<p>Retorna la resta de <code>a</code> y <code>b</code>.</p>
+<h3 id="multiplicacion-op-mul-result-ab">Multiplicación <code>*</code> <code>op mul result ab</code><a class="headerlink" href="#multiplicacion-op-mul-result-ab" title="Permanent link">&para;</a></h3>
+<p>Retorna la multiplicación de  <code>a</code> y <code>b</code></p>
+<h3 id="division-normal-op-div-result-a-b">División normal <code>/</code> <code>op div result a b</code><a class="headerlink" href="#division-normal-op-div-result-a-b" title="Permanent link">&para;</a></h3>
+<p>Retorna la división completa de <code>a</code>(numerador) y <code>b</code>(denominador), retorna <code>null</code> cuando se divide entre 0.</p>
+<h3 id="division-entera-op-idiv-result-a-b">División entera <code>//</code> <code>op idiv result a b</code><a class="headerlink" href="#division-entera-op-idiv-result-a-b" title="Permanent link">&para;</a></h3>
+<p>Retorna la parte entera de la división de <code>a</code>(numerador) y <code>b</code>(denominador), por ejemplo dividir 5 con 2 dará como resultado 2.</p>
+<h3 id="modulo-op-mod-result-a-b">Modulo <code>%</code> <code>op mod result a b</code><a class="headerlink" href="#modulo-op-mod-result-a-b" title="Permanent link">&para;</a></h3>
+<p>Retorna el residuo de una división entera de <code>a</code>(numerador) y <code>b</code>(denominador), por ejemplo, dividir 5 con 2 dará como resultado 1.</p>
+<h3 id="potencia-op-pow-result-a-b">Potencia <code>^</code> <code>op pow result a b</code><a class="headerlink" href="#potencia-op-pow-result-a-b" title="Permanent link">&para;</a></h3>
+<p>Retorna <code>a</code> elevado a la <code>b</code> potencia, por ejemplo, aplicar potencia de 2 con 3 dará como resultado 8.</p>
+<h3 id="comparativa-igual-op-equal-result-a-b">Comparativa igual <code>==</code> <code>op equal result a b</code><a class="headerlink" href="#comparativa-igual-op-equal-result-a-b" title="Permanent link">&para;</a></h3>
+<p>Retorna <code>true</code> o <code>false</code> dependiendo si <code>a</code> y <code>b</code> son iguales.</p>
+<h3 id="negacion-not-op-notequal-result-a-b">Negación <code>not</code> <code>op notEqual result a b</code><a class="headerlink" href="#negacion-not-op-notequal-result-a-b" title="Permanent link">&para;</a></h3>
+<p>Retornará lo inverso de la comparativa de igual, si <code>a</code> y <code>b</code> son iguales, retornará <code>false</code>.</p>
+<h3 id="comparativa-y-and-op-land-result-a-b">Comparativa Y <code>and</code> <code>op land result a b</code><a class="headerlink" href="#comparativa-y-and-op-land-result-a-b" title="Permanent link">&para;</a></h3>
+<p>Retornará <code>true</code> si ambos <code>a</code> y <code>b</code> son valores validos o <code>true</code>.</p>
+<h3 id="menor-que-op-lessthan-result-a-b">Menor que <code>&lt;</code> <code>op lessThan result a b</code><a class="headerlink" href="#menor-que-op-lessthan-result-a-b" title="Permanent link">&para;</a></h3>
+<p>Retornará <code>true</code> si <code>a</code> es un valor menor a <code>b</code>. <code>false</code> en otro caso.</p>
+<h3 id="menor-e-igual-op-lessthaneq-result-a-b">Menor e igual <code>&lt;=</code> <code>op lessThanEq result a b</code><a class="headerlink" href="#menor-e-igual-op-lessthaneq-result-a-b" title="Permanent link">&para;</a></h3>
+<p>Retornará <code>true</code> si <code>a</code> es un valor menor o igual a <code>b</code>. <code>false</code> en otro caso.</p>
+<h3 id="mayor-que-op-greaterthan-result-a-b">Mayor que <code>&gt;</code> <code>op greaterThan result a b</code><a class="headerlink" href="#mayor-que-op-greaterthan-result-a-b" title="Permanent link">&para;</a></h3>
+<p>Retornará <code>true</code> si <code>a</code> es un valor mayor a <code>b</code>. <code>false</code> en otro caso.</p>
+<h3 id="mayor-e-igual-op-greaterthaneq-result-a-b">Mayor e igual <code>&gt;=</code> <code>op greaterThanEq result a b</code><a class="headerlink" href="#mayor-e-igual-op-greaterthaneq-result-a-b" title="Permanent link">&para;</a></h3>
+<p>Retornará <code>true</code> si <code>a</code> es un valor mayor o igual a <code>b</code>. <code>false</code> en otro caso.</p>
+<h3 id="igualdad-estricta-op-strictequal-result-a-b">Igualdad estricta <code>===</code> <code>op strictEqual result a b</code><a class="headerlink" href="#igualdad-estricta-op-strictequal-result-a-b" title="Permanent link">&para;</a></h3>
+<p>Retornará <code>true</code> si <code>a</code> y <code>b</code> son objetos idénticos, que no hagan uso de la conversión implícita (eso creo).</p>
+<h3 id="bitshift-izquierda-op-shl-result-a-b">Bitshift Izquierda <code>«</code> <code>op shl result a b</code><a class="headerlink" href="#bitshift-izquierda-op-shl-result-a-b" title="Permanent link">&para;</a></h3>
+<h3 id="bitshift-derecha-op-shr-result-a-b">Bitshift derecha <code>»</code> <code>op shr result a b</code><a class="headerlink" href="#bitshift-derecha-op-shr-result-a-b" title="Permanent link">&para;</a></h3>
+<h3 id="comparativa-or-or-op-or-result-a-b">Comparativa or <code>or</code> <code>op or result a b</code><a class="headerlink" href="#comparativa-or-or-op-or-result-a-b" title="Permanent link">&para;</a></h3>
+<h3 id="comparativa-b-and-b-and-op-and-result-a-b">Comparativa b-and <code>b-and</code> <code>op and result a b</code><a class="headerlink" href="#comparativa-b-and-b-and-op-and-result-a-b" title="Permanent link">&para;</a></h3>
+<h3 id="operacion-xor-xor-op-xor-result-a-b">Operación xor <code>xor</code> <code>op xor result a b</code><a class="headerlink" href="#operacion-xor-xor-op-xor-result-a-b" title="Permanent link">&para;</a></h3>
+<h3 id="flip-de-bits-flip-op-not-result-a">Flip de bits <code>flip</code> <code>op not result a</code><a class="headerlink" href="#flip-de-bits-flip-op-not-result-a" title="Permanent link">&para;</a></h3>
+<h3 id="minimo-min-op-min-result-a-b">Mínimo <code>min</code> <code>op min result a b</code><a class="headerlink" href="#minimo-min-op-min-result-a-b" title="Permanent link">&para;</a></h3>
+<p>Retornará el valor mínimo de entre los valores <code>a</code> y <code>b</code>, por ejemplo, si se usan los valores 5 y 7, se retornará el 5.</p>
+<h3 id="maximo-max-op-max-result-a-b">Máximo <code>max</code> <code>op max result a b</code><a class="headerlink" href="#maximo-max-op-max-result-a-b" title="Permanent link">&para;</a></h3>
+<p>Retornará el valor máximo de entre los valores <code>a</code> y <code>b</code>, por ejemplo, si se usan los valores 5 y 7, se retornará el 7.</p>
+<h3 id="angulo-angle-op-angle-result-a-b">Ángulo <code>angle</code> <code>op angle result a b</code><a class="headerlink" href="#angulo-angle-op-angle-result-a-b" title="Permanent link">&para;</a></h3>
+<h3 id="diferencia-de-angulos-angle-diff-op-anglediff-result-a-b">Diferencia de ángulos <code>angle diff</code> <code>op angleDiff result a b</code><a class="headerlink" href="#diferencia-de-angulos-angle-diff-op-anglediff-result-a-b" title="Permanent link">&para;</a></h3>
+<h3 id="longitud-de-vector-len-op-len-result-a-b">Longitud de vector <code>len</code> <code>op len result a b</code><a class="headerlink" href="#longitud-de-vector-len-op-len-result-a-b" title="Permanent link">&para;</a></h3>
+<h3 id="ruido-2d-noise-op-noise-result-a-b">Ruido 2d <code>noise</code> <code>op noise result a b</code><a class="headerlink" href="#ruido-2d-noise-op-noise-result-a-b" title="Permanent link">&para;</a></h3>
+<h3 id="valor-absoluto-abs-op-abs-result-a">Valor absoluto <code>abs</code> <code>op abs result a</code><a class="headerlink" href="#valor-absoluto-abs-op-abs-result-a" title="Permanent link">&para;</a></h3>
+<h3 id="logaritmo-log-op-log-result-a">Logaritmo <code>log</code> <code>op log result a</code><a class="headerlink" href="#logaritmo-log-op-log-result-a" title="Permanent link">&para;</a></h3>
+<h3 id="logaritmo-base-10-log10-op-log10-result-a">Logaritmo base 10 <code>log10</code> <code>op log10 result a</code><a class="headerlink" href="#logaritmo-base-10-log10-op-log10-result-a" title="Permanent link">&para;</a></h3>
+<h3 id="redondeo-a-menor-floor-op-floor-result-a">Redondeo a menor  <code>floor</code> <code>op floor result a</code><a class="headerlink" href="#redondeo-a-menor-floor-op-floor-result-a" title="Permanent link">&para;</a></h3>
+<h3 id="redondeo-a-mayor-ceil-op-ceil-result-a">Redondeo a mayor <code>ceil</code> <code>op ceil result a</code><a class="headerlink" href="#redondeo-a-mayor-ceil-op-ceil-result-a" title="Permanent link">&para;</a></h3>
+<h3 id="raiz-cuadrada-op-sqrt-result-a">Raíz cuadrada <code>*</code> <code>op sqrt result a</code><a class="headerlink" href="#raiz-cuadrada-op-sqrt-result-a" title="Permanent link">&para;</a></h3>
+<h3 id="numero-random-sqrt-op-rand-result-a">Numero random <code>sqrt</code> <code>op rand result a</code><a class="headerlink" href="#numero-random-sqrt-op-rand-result-a" title="Permanent link">&para;</a></h3>
+<h3 id="seno-sin-op-sin-result-a">Seno <code>sin</code> <code>op sin result a</code><a class="headerlink" href="#seno-sin-op-sin-result-a" title="Permanent link">&para;</a></h3>
+<h3 id="coseno-cos-op-cos-result-a">Coseno <code>cos</code> <code>op cos result a</code><a class="headerlink" href="#coseno-cos-op-cos-result-a" title="Permanent link">&para;</a></h3>
+<h3 id="tangente-tan-op-tan-result-a">Tangente <code>tan</code> <code>op tan result a</code><a class="headerlink" href="#tangente-tan-op-tan-result-a" title="Permanent link">&para;</a></h3>
+<h3 id="arcoseno-asin-op-asin-result-a">Arcoseno <code>asin</code> <code>op asin result a</code><a class="headerlink" href="#arcoseno-asin-op-asin-result-a" title="Permanent link">&para;</a></h3>
+<h3 id="arcocoseno-acos-op-acos-result-a">Arcocoseno <code>acos</code> <code>op acos result a</code><a class="headerlink" href="#arcocoseno-acos-op-acos-result-a" title="Permanent link">&para;</a></h3>
+<h3 id="arcotangente-atan-op-atan-result-a">Arcotangente <code>atan</code> <code>op atan result a</code><a class="headerlink" href="#arcotangente-atan-op-atan-result-a" title="Permanent link">&para;</a></h3>
+<h2 id="lookup">Lookup<a class="headerlink" href="#lookup" title="Permanent link">&para;</a></h2>
+<p>Lookup le permite al procesador obtener el tipo de dato de un item/líquido/unidad/bloque haciendo uso de un indice. Básicamente a cada contenido del juego se le asigna un número para distintos usos. Para obtener el numero total de estos tipos puedes hacer uso de <code>@blockCount</code> para bloques, <code>@unitCount</code> para unidades, <code>@itemCount</code> para items y <code>@liquidCount</code> para líquidos. Estos valores pueden usarse en conjunto con instrucciones jump para crear un bucle y revisar cada uno de estos. Por ejemplo, al usar <code>lookup</code> de bloques en el indice <code>1</code> obtendremos el tipo de dato <code>@duo</code>.</p>
+<h2 id="pack-color">Pack Color<a class="headerlink" href="#pack-color" title="Permanent link">&para;</a></h2>
+<p>Pack Color le permite al procesador empaquetar los componentes de un color <strong>R</strong>ed <strong>G</strong>reen <strong>B</strong>lue <strong>A</strong>lpha en una sola variable usándose para establecer colores en las pantallas lógicas. El rango de cada parámetro va del 0 al 1.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="tipos-de-datos.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Tipos de datos">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Tipos de datos
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="instrucciones-y-concepto-de-control-de-flujo.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Instrucciones y concepto de control de flujo">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Instrucciones y concepto de control de flujo
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "navigation.tracking", "navigation.top", "navigation.footer"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

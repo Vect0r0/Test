@@ -1,0 +1,1525 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="trabajando-con-el-editor-manual.html">
+      
+      
+        <link rel="next" href="tipos-de-datos.html">
+      
+      
+      <link rel="icon" href="images/UI/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>Variables y constantes - Guia Lógica ESP</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#variables-y-constantes" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="index.html" title="Guia Lógica ESP" class="md-header__button md-logo" aria-label="Guia Lógica ESP" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.5.75V2h3V.75a.75.75 0 0 1 1.5 0V2h1.25c.966 0 1.75.784 1.75 1.75V5h1.25a.75.75 0 0 1 0 1.5H14v3h1.25a.75.75 0 0 1 0 1.5H14v1.25A1.75 1.75 0 0 1 12.25 14H11v1.25a.75.75 0 0 1-1.5 0V14h-3v1.25a.75.75 0 0 1-1.5 0V14H3.75A1.75 1.75 0 0 1 2 12.25V11H.75a.75.75 0 0 1 0-1.5H2v-3H.75a.75.75 0 0 1 0-1.5H2V3.75C2 2.784 2.784 2 3.75 2H5V.75a.75.75 0 0 1 1.5 0Zm5.75 11.75a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25ZM5.75 5h4.5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-.75.75h-4.5a.75.75 0 0 1-.75-.75v-4.5A.75.75 0 0 1 5.75 5Zm.75 4.5h3v-3h-3Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Guia Lógica ESP
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Variables y constantes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="purple"  aria-label="Cambia a modo obscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambia a modo obscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="deep-purple"  aria-label="Cambia a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambia a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Guia Lógica ESP" class="md-nav__button md-logo" aria-label="Guia Lógica ESP" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.5.75V2h3V.75a.75.75 0 0 1 1.5 0V2h1.25c.966 0 1.75.784 1.75 1.75V5h1.25a.75.75 0 0 1 0 1.5H14v3h1.25a.75.75 0 0 1 0 1.5H14v1.25A1.75 1.75 0 0 1 12.25 14H11v1.25a.75.75 0 0 1-1.5 0V14h-3v1.25a.75.75 0 0 1-1.5 0V14H3.75A1.75 1.75 0 0 1 2 12.25V11H.75a.75.75 0 0 1 0-1.5H2v-3H.75a.75.75 0 0 1 0-1.5H2V3.75C2 2.784 2.784 2 3.75 2H5V.75a.75.75 0 0 1 1.5 0Zm5.75 11.75a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25ZM5.75 5h4.5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-.75.75h-4.5a.75.75 0 0 1-.75-.75v-4.5A.75.75 0 0 1 5.75 5Zm.75 4.5h3v-3h-3Z"/></svg>
+
+    </a>
+    Guia Lógica ESP
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="que-es-la-logica.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ¿Que es la lógica?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="concepto-de-instruccion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concepto de instrucción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="como-escribir-codigo.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Como escribir código
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="trabajando-con-el-editor-visual.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trabajando con el editor visual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="trabajando-con-el-editor-manual.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trabjando con el editor manual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Variables y constantes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="variables-y-constantes.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Variables y constantes
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concepto-de-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepto de variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reglas-en-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reglas en variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#declaracion-de-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declaración de variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Declaración de variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-resultado-de-una-instruccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como resultado de una instrucción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haciendo-uso-de-la-instruccion-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Haciendo uso de la instrucción set
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversion-implicita-de-valores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversión implícita de valores
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constantes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Constantes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concepto-de-constante" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepto de constante
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constantes-y-variables-propias-del-procesador" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constantes y variables propias del procesador
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Constantes y variables propias del procesador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relacionadas-al-procesador" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relacionadas al procesador
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relacionadas al procesador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#this-constante-construccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      @this constante construcción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thisx-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @thisx constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thisy-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @thisy constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipt-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @ipt constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#counter-variable-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @counter variable numero
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacionadas-a-las-conexiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relacionadas a las conexiones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relacionadas a las conexiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#links-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @links constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constante-construccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      constante construcción
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacionadas-a-las-matematicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relacionadas a las matemáticas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relacionadas a las matemáticas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pi-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @pi constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      π constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @e constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#degtorad-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @degToRad constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radtodeg-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @radToDeg constante numero
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacionadas-al-mapa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relacionadas al mapa
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relacionadas al mapa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @time constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tick-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @tick constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @second constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minute-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @minute constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wavenumber-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @waveNumber constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wavetime-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @waveTime constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapw-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @mapw constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maph-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @maph constante numero
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacionadas-al-control-de-unidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relacionadas al control de unidades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relacionadas al control de unidades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit-constante-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      @unit constante unidad
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tipos-de-datos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tipos de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="instrucciones-de-operacion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instrucciones de operación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="instrucciones-y-concepto-de-control-de-flujo.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instrucciones y concepto de control de flujo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="instrucciones-de-control-de-bloques.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instrucciones de control de bloques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="instrucciones-de-control-de-unidades.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instrucciones de control de unidades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="comentarios.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comentarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="1-contenido-a-agregar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contenido a agregar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concepto-de-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepto de variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reglas-en-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reglas en variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#declaracion-de-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declaración de variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Declaración de variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-resultado-de-una-instruccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como resultado de una instrucción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haciendo-uso-de-la-instruccion-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Haciendo uso de la instrucción set
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversion-implicita-de-valores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversión implícita de valores
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constantes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Constantes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concepto-de-constante" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepto de constante
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constantes-y-variables-propias-del-procesador" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constantes y variables propias del procesador
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Constantes y variables propias del procesador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relacionadas-al-procesador" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relacionadas al procesador
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relacionadas al procesador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#this-constante-construccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      @this constante construcción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thisx-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @thisx constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thisy-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @thisy constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipt-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @ipt constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#counter-variable-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @counter variable numero
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacionadas-a-las-conexiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relacionadas a las conexiones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relacionadas a las conexiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#links-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @links constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constante-construccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      constante construcción
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacionadas-a-las-matematicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relacionadas a las matemáticas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relacionadas a las matemáticas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pi-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @pi constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      π constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @e constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#degtorad-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @degToRad constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radtodeg-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @radToDeg constante numero
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacionadas-al-mapa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relacionadas al mapa
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relacionadas al mapa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @time constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tick-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @tick constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @second constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minute-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @minute constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wavenumber-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @waveNumber constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wavetime-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @waveTime constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapw-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @mapw constante numero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maph-constante-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      @maph constante numero
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacionadas-al-control-de-unidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relacionadas al control de unidades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relacionadas al control de unidades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit-constante-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      @unit constante unidad
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="variables-y-constantes">Variables y constantes<a class="headerlink" href="#variables-y-constantes" title="Permanent link">&para;</a></h1>
+<h2 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h2>
+<h3 id="concepto-de-variable">Concepto de variable<a class="headerlink" href="#concepto-de-variable" title="Permanent link">&para;</a></h3>
+<p>Para comenzar, debemos entender el concepto de variable, las variables son "contenedores de información" que se guardan en memoria, en este caso, en un procesador. Estas deben tener un nombre para identificarlas, usarlas y modificaras. Estas además pueden contener distintos tipos de información o datos. Dentro del juego, una variable puede contener la información de una unidad, el estado de un bloque, un numero tan simple como una coordenada, o texto,consulta <a href="tipos-de-datos.html">tipos de datos</a> para ver todos los tipos disponibles. La función principal de estas es hacer flexibles las instrucciones, por ejemplo, si le ordenas a una unidad moverse a la posición 100, 100 solo podrá moverse a esa posición, pero si en otro caso usar variables como <code>x</code> y <code>y</code>, que son modificadas por el procesador, entonces la unidad podrá moverse a donde el procesador le indique.</p>
+<h3 id="reglas-en-variables">Reglas en variables<a class="headerlink" href="#reglas-en-variables" title="Permanent link">&para;</a></h3>
+<p>Para un buen uso de las mismas, las variables tiene que seguir una serie de reglas:</p>
+<ul>
+<li>El nombre debe ser un nombre valido, no puede ser un número, ejemplo: <code>123</code>.</li>
+<li>Este nombre no debe repetirse, si esto se hace el valor que la variable tenia se sobrescribirá, en algunas ocasiones será algo que quieres, pero en caso contrario, no lo hagas, ejemplo: si tu variable <code>coordenada_x</code> tenía un valor de <code>100</code> y vuelves a definir la variable la cadena <code>"frog"</code>, <code>coordenada_x</code> tendrá ese nuevo valor.  </li>
+<li>El nombre no puede contener espacios vacíos, puedes hacer uso de guión medio, bajo, o usar mayúsculas como separación de palabras, ejemplo: <code>oreX</code>, <code>ore_x</code>, <code>ore-x</code>.</li>
+<li>Las variables tienen que tener un nombre con sentido y claro, para identificar fácilmente que valor contiene, ejemplo: Es mas sencillo saber el contenido de una variable llamada <code>unidad_controlada</code> a una llamada <code>abalkfalk</code>.</li>
+</ul>
+<h3 id="declaracion-de-variables">Declaración de variables<a class="headerlink" href="#declaracion-de-variables" title="Permanent link">&para;</a></h3>
+<p>Para declarar o crear variables existen 2 maneras, como resultado de una instrucción o haciendo uso de la instrucción <code>set</code>.</p>
+<h4 id="como-resultado-de-una-instruccion">Como resultado de una instrucción<a class="headerlink" href="#como-resultado-de-una-instruccion" title="Permanent link">&para;</a></h4>
+<p>Simplemente agrega en el campo de salida el nombre con el que quieres identificar la variable y el sistema la creará y le asignará el valor correspondiente, ejemplo: 
+Si quieres declarar una variable que tenga la coordenada x de un bloque, pones el nombre de la misma, en este caso <code>coordenada-x</code> en el campo correspondiente, y el sistema la creará y le asignará un valor.</p>
+<p>[[Imagen]]</p>
+<h4 id="haciendo-uso-de-la-instruccion-set">Haciendo uso de la instrucción set<a class="headerlink" href="#haciendo-uso-de-la-instruccion-set" title="Permanent link">&para;</a></h4>
+<p>Crea una instrucción set y agrega el nombre de tu variable, además del valor que deseas que tenga, ejemplo: Si quieres crear una variable que contenga la cantidad de items en la cual tu fabrica se detendrá, agregas el nombre de la misma, en este caso <code>cantidad-maxima</code> con el valor correspondiente, en este caso <code>25</code>.</p>
+<p>[[Imagen]]</p>
+<h3 id="conversion-implicita-de-valores">Conversión implícita de valores<a class="headerlink" href="#conversion-implicita-de-valores" title="Permanent link">&para;</a></h3>
+<p>Esto implica la conversión de un valor a otro, para adecuar los valores de entrada a las instrucciones.</p>
+<p>Si una instrucción usa un <code>Objeto</code> y se le ingresa un <code>Número</code>, se convertirá en <code>null</code>, si necesita un <code>Número</code> y se le ingresa un <code>Objeto</code>, este será convertido a 1.</p>
+<h2 id="constantes">Constantes<a class="headerlink" href="#constantes" title="Permanent link">&para;</a></h2>
+<h3 id="concepto-de-constante">Concepto de constante<a class="headerlink" href="#concepto-de-constante" title="Permanent link">&para;</a></h3>
+<p>Otro concepto importante son las constantes, estas al igual que las variables son contenedores de información, solo que tienen un valor que no puede ser cambiado por el usuario, por ejemplo en el mundo real tenemos a la constante de la gravedad, o el numero PI.</p>
+<h2 id="constantes-y-variables-propias-del-procesador">Constantes y variables propias del procesador<a class="headerlink" href="#constantes-y-variables-propias-del-procesador" title="Permanent link">&para;</a></h2>
+<p>Cada procesador tiene variables y constantes propias, algunas referidas al mundo, como <code>mapw</code> que contiene el ancho del mapa en tiles, y otras independientes por procesador, como <code>thisx</code>que contiene la coordenada <code>x</code> del procesador.</p>
+<h3 id="relacionadas-al-procesador">Relacionadas al procesador<a class="headerlink" href="#relacionadas-al-procesador" title="Permanent link">&para;</a></h3>
+<h4 id="this-constante-construccion"><em>@this</em> <code>constante</code> <code>construcción</code><a class="headerlink" href="#this-constante-construccion" title="Permanent link">&para;</a></h4>
+<p>Hace referencia al mismo procesador.</p>
+<h4 id="thisx-constante-numero"><em>@thisx</em> <code>constante</code> <code>numero</code><a class="headerlink" href="#thisx-constante-numero" title="Permanent link">&para;</a></h4>
+<p>Hace referencia a la coordenada <code>x</code> del procesador.</p>
+<h4 id="thisy-constante-numero"><em>@thisy</em> <code>constante</code> <code>numero</code><a class="headerlink" href="#thisy-constante-numero" title="Permanent link">&para;</a></h4>
+<p>Hace referencia a la coordenada <code>y</code> del procesador.</p>
+<h4 id="ipt-constante-numero"><em>@ipt</em> <code>constante</code> <code>numero</code><a class="headerlink" href="#ipt-constante-numero" title="Permanent link">&para;</a></h4>
+<p>Hace referencia a las instrucciones por tick que este procesador está realizando. Adicional a esto, existe otra medida llamada <code>tps</code> o ticks por segundo, que en situaciones normales suele ser de 60. </p>
+<h4 id="counter-variable-numero"><em>@counter</em> <code>variable</code> <code>numero</code><a class="headerlink" href="#counter-variable-numero" title="Permanent link">&para;</a></h4>
+<p>Hace referencia al índice de la próxima instrucción a ejecutarse, el indice comienza en 0 y terminará hasta la ultima instrucción - 1, es decir, si el procesador cuenta con 10 instrucciones, el indice va de 0 a 9. <a href="instrucciones-y-concepto-de-control-de-flujo.html#manipulación-avanzada-del-flujo-de-ejecución">Puede ser modificada por el usuario para conseguir comportamientos avanzados.</a></p>
+<h3 id="relacionadas-a-las-conexiones">Relacionadas a las conexiones<a class="headerlink" href="#relacionadas-a-las-conexiones" title="Permanent link">&para;</a></h3>
+<h4 id="links-constante-numero"><em>@links</em> <code>constante</code> <code>numero</code><a class="headerlink" href="#links-constante-numero" title="Permanent link">&para;</a></h4>
+<p>Hace referencia a la cantidad de construcciones vinculadas al procesador. Puede usarse para recorrer cada una de estas y realizar acciones.</p>
+<h4 id="constante-construccion"><code>constante</code> <code>construcción</code><a class="headerlink" href="#constante-construccion" title="Permanent link">&para;</a></h4>
+<p>Estas son multiples constantes, una por cada construcción vinculada al procesador, son removidas cuando una construcción es desvinculada o vinculada al procesador, los nombres de las mismas se componen del nombre interno de la construcción, además de <code>n</code> que inicia en 1 e incrementa con cada construcción del mismo tipo que se vincule, algo como la enésima construcción.</p>
+<h3 id="relacionadas-a-las-matematicas">Relacionadas a las matemáticas<a class="headerlink" href="#relacionadas-a-las-matematicas" title="Permanent link">&para;</a></h3>
+<h4 id="pi-constante-numero"><em>@pi</em> <code>constante</code> <code>numero</code><a class="headerlink" href="#pi-constante-numero" title="Permanent link">&para;</a></h4>
+<p>Referencia al numero pi <code>3.1415927410125732</code> (numero pi).</p>
+<h4 id="constante-numero"><em>π</em> <code>constante</code> <code>numero</code><a class="headerlink" href="#constante-numero" title="Permanent link">&para;</a></h4>
+<p>Referencia al numero <code>3.1415927410125732</code> con más estilo (numero pi).</p>
+<h4 id="e-constante-numero"><em>@e</em> <code>constante</code> <code>numero</code><a class="headerlink" href="#e-constante-numero" title="Permanent link">&para;</a></h4>
+<p>Referencia al numero <code>2.7182817459106445</code> (numero euler).</p>
+<h4 id="degtorad-constante-numero"><em>@degToRad</em> <code>constante</code> <code>numero</code><a class="headerlink" href="#degtorad-constante-numero" title="Permanent link">&para;</a></h4>
+<p>Referencia al numero <code>0.01745329238474369</code>, multiplica este numero con tus grados para convertirlos a radianes.</p>
+<h4 id="radtodeg-constante-numero"><em>@radToDeg</em> <code>constante</code> <code>numero</code><a class="headerlink" href="#radtodeg-constante-numero" title="Permanent link">&para;</a></h4>
+<p>Referencia al numero <code>57.2957763671875</code>, multiplica este numero con tus radianes para convertirlos a grados.</p>
+<h3 id="relacionadas-al-mapa">Relacionadas al mapa<a class="headerlink" href="#relacionadas-al-mapa" title="Permanent link">&para;</a></h3>
+<h4 id="time-constante-numero"><em>@time</em>  <code>constante</code> <code>numero</code><a class="headerlink" href="#time-constante-numero" title="Permanent link">&para;</a></h4>
+<p>Tiempo desde que se empezó a jugar en el mapa, en milisegundos (tiempo en pausa no cuenta).</p>
+<h4 id="tick-constante-numero"><em>@tick</em> <code>constante</code> <code>numero</code><a class="headerlink" href="#tick-constante-numero" title="Permanent link">&para;</a></h4>
+<p>Ticks realizados desde que se empezó a jugar en el mapa, (tiempo en pausa no cuenta).</p>
+<h4 id="second-constante-numero"><em>@second</em> <code>constante</code> <code>numero</code><a class="headerlink" href="#second-constante-numero" title="Permanent link">&para;</a></h4>
+<p>Tiempo desde que se empezó a jugar en el mapa, en segundos (tiempo en pausa no cuenta).</p>
+<h4 id="minute-constante-numero"><em>@minute</em> <code>constante</code> <code>numero</code><a class="headerlink" href="#minute-constante-numero" title="Permanent link">&para;</a></h4>
+<p>Tiempo desde que se empezó a jugar en el mapa, en minutos (tiempo en pausa no cuenta).</p>
+<h4 id="wavenumber-constante-numero"><em>@waveNumber</em> <code>constante</code> <code>numero</code><a class="headerlink" href="#wavenumber-constante-numero" title="Permanent link">&para;</a></h4>
+<p>Referencia a la oleada actual.</p>
+<h4 id="wavetime-constante-numero"><em>@waveTime</em> <code>constante</code> <code>numero</code><a class="headerlink" href="#wavetime-constante-numero" title="Permanent link">&para;</a></h4>
+<p>Referencia al tiempo que falta para que inicie la próxima oleada, en segundos.</p>
+<h4 id="mapw-constante-numero"><em>@mapw</em> <code>constante</code> <code>numero</code><a class="headerlink" href="#mapw-constante-numero" title="Permanent link">&para;</a></h4>
+<p>Referencia al ancho del mapa, en casillas o tiles.</p>
+<h4 id="maph-constante-numero"><em>@maph</em> <code>constante</code> <code>numero</code><a class="headerlink" href="#maph-constante-numero" title="Permanent link">&para;</a></h4>
+<p>Referencia a lo alto del mapa, en casillas o tiles.</p>
+<h3 id="relacionadas-al-control-de-unidades">Relacionadas al control de unidades<a class="headerlink" href="#relacionadas-al-control-de-unidades" title="Permanent link">&para;</a></h3>
+<h4 id="unit-constante-unidad">@unit <code>constante</code> <code>unidad</code><a class="headerlink" href="#unit-constante-unidad" title="Permanent link">&para;</a></h4>
+<p>Referencia a la unidad actualmente vinculada. Esta solo cambia cuando se desvincula la unidad o se vincula una nueva. Esta es usada por las instrucciones relacionadas al control de unidades para saber a que unidad afectar. <strong>Solo una unidad puede ser controlada a la vez</strong> por el procesador. Aunque, puedes almacenar la misma en una variable, esta no podrá usarse para controlar a esa unidad pero puedes seguir usandola en sensores. </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="trabajando-con-el-editor-manual.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Trabjando con el editor manual">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Trabjando con el editor manual
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="tipos-de-datos.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Tipos de datos">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Tipos de datos
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "navigation.tracking", "navigation.top", "navigation.footer"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
