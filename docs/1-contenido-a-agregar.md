@@ -2,7 +2,7 @@
 
 - [x] [[index|Introducción]].
 	* [x] [[Objetivo de la guía.]]
-- [x] [[que-es-la-logica#¿Que es la lógica?|¿Que es la lógica?]]
+- [x] [[que-es-la-logica#¿Qué es la lógica?|¿Qué es la lógica?]]
 	* [x] [[que-es-la-logica#Funciones de la lógica|Funciones de la lógica]].
 	* [x] [[que-es-la-logica#Acceder a la lógica dentro del juego.|Acceder a la lógica dentro del juego.]]
 	* [x] [[que-es-la-logica#Limitaciones de la lógica|Limitaciones de la lógica.]]

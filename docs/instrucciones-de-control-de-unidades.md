@@ -37,12 +37,12 @@ Apuntará a las coordenadas `x` `y` especificadas. Si `shoot` es `true` esta dis
 
 Disparará a un objetivo especificado en `unit/block` con predicción de movimiento incluido(si se especificó una unidad). Si `shoot` es `true` esta disparará, en caso contrario no hará nada.
 
-### Soltar item `itemDrop` `ucontrol itemDrop to amount`
+### Soltar ítem `itemDrop` `ucontrol itemDrop to amount`
 
-Soltará al objetivo especificado en `to` (ya sea un núcleo, torreta, boveda, etc.) la cantidad de items especificadas en `amount`. Como dato adicional, puedes poner `@air` en `to` para desechar los items.
-### Tomar item `itemTake` `ucontrol itemTake from item amount`
+Soltará al objetivo especificado en `to` (ya sea un núcleo, torreta, bóveda, etc.) la cantidad de ítems especificadas en `amount`. Como dato adicional, puedes poner `@air` en `to` para desechar los ítems.
+### Tomar ítem `itemTake` `ucontrol itemTake from item amount`
 
-Tomará del objetivo especificado en `from` (ya sea un núcleo, torreta, boveda, etc.) un `item`, la cantidad especifica se establece en `amount`.
+Tomará del objetivo especificado en `from` (ya sea un núcleo, torreta, bóveda, etc.) un `item`, la cantidad especifica se establece en `amount`.
 
 ### Soltar cargamento `payDrop` `ucontrol payDrop`
 

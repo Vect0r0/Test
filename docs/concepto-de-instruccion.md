@@ -6,6 +6,10 @@ Las instrucciones son las acciones que le pedimos al procesador hacer, con un ra
 
 Para que las instrucciones cumplan su cometido, es necesario proveerles de detalles extra que necesitan, por ejemplo, si quieres que una torreta dispare, la instrucción encargada de hacerlo deberá saber a que torreta le ordenará realizar esta acción, además de a que coordenadas decirle que apunte. Si quieres sumar 2 números, necesitas darle saber a la instrucción que números serán esos. Estos datos pueden ser ingresados en las instrucciones por la persona que realiza el código, u obtenidos por el procesador.
 
+![[instruccion-disparo.png]]
+
 ## Datos de salida
 
 Para que las instrucciones creen un comportamiento mas avanzado es necesario que estas se comuniquen entre sí, la manera de hacer esto es a través de los datos de salida, estos son los resultados que una instrucción generó, por ejemplo, si una instrucción suma 2 números, el resultado de esa acción puede ser usado por otra instrucción para definir su comportamiento.
+
+![[instruccion-entrada-salida.png]]

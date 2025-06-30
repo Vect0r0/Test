@@ -12,7 +12,7 @@ El flujo de ejecución es el orden en el que las instrucciones se ejecutarán de
 
 Existen diversas instrucciones que permitirán modificar el flujo de ejecución de un procesador, estas se encuentran dentro de su propia categoría, `Control de flujo` con un color cían:
 
-[[imagen-instrucciones]]
+![[control-flujo-instrucciones.png]]
 ### wait
 
 Detiene la ejecución del procesador una cierta cantidad de segundos.
@@ -26,7 +26,7 @@ Reiniciará el flujo de ejecución, regresando a la primera instrucción, es equ
 
 La piedra angular del sistema lógico, los saltos permiten crear comportamientos diversos en base a toma de decisiones, cosa que no sería posible sin ellos. Estos cuentan con una condición, que, cuando se cumple, saltará a una instrucción específica, ignorando las que le seguían, cuenta con las siguientes comparativas:
 
-* `Igualdad == `: Compara 2 objetos, numeros, etc. Resultando verdadero si son iguales. Convertirá los mismos si es necesario.
+* `Igualdad == `: Compara 2 objetos, números, etc. Resultando verdadero si son iguales. Convertirá los mismos si es necesario.
 * `Negación not `: Niega la comparativa de 2 objetos, números, etc. Es decir, invertirá el resultado de una igualdad. Convertirá los tipos mismos si es necesario.
 * `Menor que < `: Compara 2 objetos, números, etc. Resulta verdadero si el primero es menor que el segundo.
 * `Menor o igual que <=` Compara 2 objetos, números, etc. Resulta verdadero si el primero es menor o igual que el segundo.
@@ -35,5 +35,5 @@ La piedra angular del sistema lógico, los saltos permiten crear comportamientos
 
 ## Manipulación avanzada del flujo de ejecución
 
-Esta técnica se desarrolló en base a la variable `counter` que existe en cada procesador, esta variable indica cual será el indice de la próxima instrucción a ejecutarse, y al ser una variable, puede ser modificada, por lo que por ejemplo puedes simular el funcionamiento de una instrucción `jump`, o creación de estructuras como funciones. (No conozco mucho de esto)
+Esta técnica se desarrolló en base a la variable `counter` que existe en cada procesador, esta variable indica cual será el índice de la próxima instrucción a ejecutarse, y al ser una variable, puede ser modificada, por lo que por ejemplo puedes simular el funcionamiento de una instrucción `jump`, o creación de estructuras como funciones. (No conozco mucho de esto)
 

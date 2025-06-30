@@ -66,7 +66,7 @@ Puedes hacer uso de 3 de estos filtros, los cuales seleccionas para especificar 
 
 Todas las unidades que cumplan con los 3 filtros anteriores se encontrarán en una especie de lista, esa lista se ordenará dependiendo del ordenamiento que selecciones, el cual cuenta con las siguientes opciones:
 
-* `distance`: distancia respecto a la unidad.
+* `distance`: distancia respecto a la torreta.
 * `health`: salud actual de las unidades.
 * `shield`: cantidad de escudo actual.
 * `armor`: puntos de armadura, puedes revisar si una unidad cuenta con esto en su información.
@@ -75,7 +75,7 @@ Todas las unidades que cumplan con los 3 filtros anteriores se encontrarán en u
 Por ultimo está el parámetro `order` que cuenta con dos modos:
 
 * con valor `1`: ordenará la lista de unidades de manera ascendente.
-* con valor `0`: ordenará la lista de unidades de manera descendente, específicamente, la invertirá.
+* con valor `0`: ordenará la lista de unidades de manera descendente.
 
 La unidad resultante se almacenará en la variable `output` para su uso.
 
@@ -83,9 +83,6 @@ La unidad resultante se almacenará en la variable `output` para su uso.
 
 Este comando es de gran utilidad, te permite obtener propiedades de bloques y unidades, cosas como coordenadas, items, configuración, salud etc.
 Draw print flush 
-Get link
-Control 
-Radar
 Sensor
 
 ## Draw flush
