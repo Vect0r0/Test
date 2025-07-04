@@ -9,15 +9,19 @@ El sistema en su estado actual puede realizar las siguientes funciones, entre mu
 * Obtener información de unidades, bloques y del propio jugador.
 
 ![[logica-informacion.gif]]
+
 * Controlar bloques, unidades y torretas.
 
 ![[logica-control.gif]]
+
 * Mostrar figuras, colores y texto en pantallas.
 
 ![[logica-pantallas.gif]]
+
 * Mostrar información como texto en bloques de mensaje.
 
 ![[logica-mensajes.gif]]
+
 * Leer y escribir información de celdas de memoria.
 * Realizar operaciones matemáticas.
 
