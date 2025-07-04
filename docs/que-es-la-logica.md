@@ -7,11 +7,21 @@ La lógica (mlog) es un lenguaje de programación tipo scripting (ejecutado en t
 El sistema en su estado actual puede realizar las siguientes funciones, entre muchas otras cosas:
 
 * Obtener información de unidades, bloques y del propio jugador.
+
+![[logica-informacion.gif]]
 * Controlar bloques, unidades y torretas.
-* Mostrar figuras y colores en pantallas.
+
+![[logica-control.gif]]
+* Mostrar figuras, colores y texto en pantallas.
+
+![[logica-pantallas.gif]]
 * Mostrar información como texto en bloques de mensaje.
+
+![[logica-mensajes.gif]]
 * Leer y escribir información de celdas de memoria.
 * Realizar operaciones matemáticas.
+
+![[logica-operaciones.gif]]
 
 Con estas acciones podemos realizar un sin fin de mecanismos, todo dependerá de nuestra capacidad para hacerlos realidad. 
 
