@@ -8,6 +8,7 @@ El flujo de ejecución es el orden en el que las instrucciones se ejecutarán de
 * Cuando se ha ejecutado la última instrucción del procesador, el flujo se reiniciará, ejecutando todo desde la primera instrucción. Creando un comportamiento de bucle.
 * Todo lo realizado en los bucles de ejecución del procesador (declarar variables, asignar valores, etc.) es mantenido, no se elimina.
 
+![[control-flujo-funcionamiento.gif]]
 ## Instrucciones
 
 Existen diversas instrucciones que permitirán modificar el flujo de ejecución de un procesador, estas se encuentran dentro de su propia categoría, `Control de flujo` con un color cían:
@@ -16,9 +17,11 @@ Existen diversas instrucciones que permitirán modificar el flujo de ejecución 
 ### wait
 
 Detiene la ejecución del procesador una cierta cantidad de segundos.
+
+![[control-flujo-wait.gif]]
 ### stop
 
-Detendrá completamente la ejecución de instrucciones en el procesador.
+Detendrá completamente la ejecución de instrucciones en el procesador dejándolo inactivo permanentemente.
 ### end
 
 Reiniciará el flujo de ejecución, regresando a la primera instrucción, es equivalente a haber llegado a la última instrucción.
