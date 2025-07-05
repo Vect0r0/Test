@@ -68,7 +68,7 @@ plugins:
       lang: es
   - roamlinks
   - offline
-  - optimize
+  #- optimize
 
 extra_javascript:
   - javascripts/mathjax.js
