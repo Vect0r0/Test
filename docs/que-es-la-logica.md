@@ -80,8 +80,8 @@ La lógica cuenta con distintas limitaciones aplicadas a propósito, ya que el o
 * Una unidad no podrá volar si no cuenta con la capacidad.
 
 
-Además de esto, los procesadores lógicos cuentan con una cantidad definida de instrucciones realizables por segundo, la misma está en el formato de `ipt` o instrucciones por `tick`, dentro de condiciones normales el juego realiza `60` instrucciones por `tick`, estas son las estadísticas de los 3 procesadores.
+Además de esto, los procesadores lógicos cuentan con una cantidad definida de instrucciones realizables por segundo, la cual está ligada a las instrucciones por `tick` abreviado `ipt`, en las mejores condiciones el juego ejecutará `60` `ticks` por segundo abreviado `tps`, estas son las estadísticas de los 3 procesadores.
 
-* `Microprocesador - 2 ipt` = 120 instrucciones por segundo.
-* `Procesador lógico - 8 ipt` = 480 instrucciones por segundo.
-* `Hiperprocesador - 25 ipt` = 1500 instrucciones por segundo.
+* `Microprocesador - 2 ipt * 60 tps` = 120 instrucciones por segundo.
+* `Procesador lógico - 8 ipt * 60 tps` = 480 instrucciones por segundo.
+* `Hiperprocesador - 25 ipt * 60 tps` = 1500 instrucciones por segundo.
