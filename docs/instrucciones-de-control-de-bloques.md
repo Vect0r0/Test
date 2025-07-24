@@ -81,10 +81,13 @@ La unidad resultante se almacenará en la variable `output` para su uso.
 
 ## Sensor
 
-Este comando es de gran utilidad, te permite obtener propiedades de bloques y unidades, cosas como coordenadas, items, configuración, salud etc.
-Draw print flush 
-Sensor
-
+Este comando nos permite obtener propiedades de bloques, unidades, torretas, núcleos y prácticamente todo contenido al que tengamos acceso desde un procesador. Como ejemplo de las propiedades que podemos obtener están.
+* Objetos en núcleos, unidades, cintas, fabricas, etc.
+* Coordenadas de una unidad, bloque, etc.
+* Salud actual y total de unidades, cintas, núcleos.
+* Estado actual de interruptores, clasificadores y fábricas de unidades.
+* Cantidad de líquidos en cintas, fábricas, contenedores, etc.
+* Propiedades más específicas y únicas como el calor que genera el reactor de torio.
 ## Draw flush
 
 ## Print flush

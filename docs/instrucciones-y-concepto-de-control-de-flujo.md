@@ -25,16 +25,24 @@ Detendrá completamente la ejecución de instrucciones en el procesador dejándo
 ### end
 
 Reiniciará el flujo de ejecución, regresando a la primera instrucción, es equivalente a haber llegado a la última instrucción.
+
+
 ### jump
 
-La piedra angular del sistema lógico, los saltos permiten crear comportamientos diversos en base a toma de decisiones, cosa que no sería posible sin ellos. Estos cuentan con una condición, que, cuando se cumple, saltará a una instrucción específica, ignorando las que le seguían, cuenta con las siguientes comparativas:
+La piedra angular del sistema lógico, los saltos permiten crear comportamientos diversos en base a toma de decisiones, cosa que no sería posible sin ellos. Estos cuentan con una condición, que, cuando se cumple, saltará a una instrucción específica, ignorando las que le seguían debajo de la misma, cuenta con las siguientes comparativas:
 
-* `Igualdad == `: Compara 2 objetos, números, etc. Resultando verdadero si son iguales. Convertirá los mismos si es necesario.
-* `Negación not `: Niega la comparativa de 2 objetos, números, etc. Es decir, invertirá el resultado de una igualdad. Convertirá los tipos mismos si es necesario.
+* `Igualdad == `: Compara 2 objetos, números, unidades o tipo de dato. Resultando verdadero si son iguales. Convertirá el tipo de dato de los mismos si es necesario.
+* `Negación not `: Invertirá el resultado de una igualdad realizada con los objetos, números, unidades o tipo de dato comparados. Convertirá el tipo de dato de los mismos si es necesario.
 * `Menor que < `: Compara 2 objetos, números, etc. Resulta verdadero si el primero es menor que el segundo.
 * `Menor o igual que <=` Compara 2 objetos, números, etc. Resulta verdadero si el primero es menor o igual que el segundo.
-* `Mayor que, Mayor o igual que`.
-* `Igualdad estricta === `: Equivalente a la igualdad, solo que no convertirá los objetos.
+* `Mayor que >` Compara 2 objetos, números, etc. Resulta verdadero si el primero es mayor que el segundo.
+* `Mayor o igual que >=` Compara 2 objetos, números, etc. Resulta verdadero si el primero es mayor o igual que el segundo.
+* `Igualdad estricta === `: Equivalente a la igualdad, solo que no convertirá el tipo de dato de lo que se encuentre comparando.
+
+#### Estructuras en bucle o cíclicas
+
+El comportamiento de la instrucción jump nos permite crear estructuras que en programación se conoce como cíclicas, donde una sección de código se repite tantas veces sea necesario ya sea usando un valor que se incrementa cada que se ejecuta una iteración del bucle o hasta que una condición se cumpla.
+
 
 ## Manipulación avanzada del flujo de ejecución
 

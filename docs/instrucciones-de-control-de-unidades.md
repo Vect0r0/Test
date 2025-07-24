@@ -14,7 +14,7 @@ Esta instrucción le indicará a la unidad realizar una acción con las capacida
 
 ### Detenerse `stop`
 
-### Moverse `move` `ucontrol move x(number) y(number)`
+### Moverse `move` `ucontrol move x y`
 
 Moverá a la unidad a las coordenadas `x` `y` especificadas. Esto lo hará en linea recta sin considerar obstáculos o que sea o no posición valida.
 ### Aproximarse `approach` `ucontrol approach x y range`

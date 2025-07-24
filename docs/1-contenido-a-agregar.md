@@ -21,7 +21,7 @@
 	* [ ] Creación de bucles con jump.
 * [ ] Instrucciones de entrada y salida.
 * [ ] [[instrucciones-de-control-de-bloques|Instrucciones de control de bloques.]]
-	* [ ] Sensor -uso en unidades -podemos sacarlo.
+	* [ ] [[instrucciones-de-control-de-bloques#Sensor|Instrucción Sensor]]
 * [ ] [[instrucciones-de-control-de-unidades|Instrucciones de control de unidades.]]
 * [ ] Buenas prácticas.
 	* [ ] Optimizaciones comunes .
