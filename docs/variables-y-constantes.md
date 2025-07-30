@@ -4,14 +4,14 @@
  
 ### Concepto de variable
 
-Para comenzar, debemos entender el concepto de variable, las variables son "contenedores de información" que se guardan en memoria, en este caso, en un procesador. Estas deben tener un nombre para identificarlas, usarlas y modificaras. Estas además pueden contener distintos tipos de información o datos. Dentro del juego, una variable puede contener la información de una unidad, el estado de un bloque, un numero tan simple como una coordenada, o texto, consulta [[tipos-de-datos|tipos de datos]] para ver todos los tipos disponibles. La función principal de estas es hacer flexibles las instrucciones, por ejemplo, si le ordenas a una unidad moverse a la posición 100, 100 solo podrá moverse a esa posición, pero si en otro caso usar variables como `x` y `y`, que son modificadas por el procesador, entonces la unidad podrá moverse a donde el procesador le indique.
+Para comenzar, debemos entender el concepto de variable, las variables son "contenedores de información" que se guardan en memoria, en este caso, en un procesador. Estas deben tener un nombre para identificarlas, usarlas y modificaras. Estas además pueden contener distintos tipos de información o datos. Dentro del juego, una variable puede contener la información de una unidad, el estado de un bloque, un numero tan simple como una coordenada, o texto, consulta [[tipos-de-datos|tipos de datos]] para ver todos los tipos disponibles. La función principal de estas es hacer flexibles las instrucciones, por ejemplo, si le ordenas a una unidad moverse a la posición 100, 100 solo podrá moverse a esa posición, pero si en otro caso usas variables como `x` y `y`, que son modificadas por el procesador, entonces la unidad podrá moverse a donde el procesador le indique.
 
 ### Reglas en variables
 
 Para un buen uso de las mismas, las variables tiene que seguir una serie de reglas:
 
 * El nombre debe ser un nombre valido, no puede ser un número, ejemplo: `123`.
-* Este nombre no debe repetirse, si esto se hace el valor que la variable tenia se sobrescribirá, en algunas ocasiones será algo que quieres, pero en caso contrario, no lo hagas, ejemplo: si tu variable `coordenada_x` tenía un valor de `100` y vuelves a definir la variable la cadena `"frog"`, `coordenada_x` tendrá ese nuevo valor.  
+* Este nombre no debe repetirse, si esto se hace el valor que la variable tenia se sobrescribirá, en algunas ocasiones será algo que quieres, pero en caso contrario, no lo hagas, ejemplo: si tu variable `coordenada_x` tiene un valor de `100` y vuelves a definir la variable con el valor `"frog"`, `coordenada_x` tendrá ese nuevo valor y puede que tus instrucciones no puedan manejarlo.  
 * El nombre no puede contener espacios vacíos, puedes hacer uso de guion medio, bajo, o usar mayúsculas como separación de palabras, ejemplo: `oreX`, `ore_x`, `ore-x`.
 * Las variables tienen que tener un nombre con sentido y claro, para identificar fácilmente que valor contiene, ejemplo: Es mas sencillo saber el contenido de una variable llamada `unidad_controlada` a una llamada `abalkfalk`.
 
@@ -52,7 +52,6 @@ Cada procesador tiene variables y constantes propias, algunas referidas al mundo
 #### *@this* `constante` `construcción`
 
 Hace referencia al mismo procesador.
-
 #### *@thisx* `constante` `numero`
 
 Hace referencia a la coordenada `x` del procesador.

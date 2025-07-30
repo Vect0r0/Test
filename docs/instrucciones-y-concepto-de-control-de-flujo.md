@@ -22,10 +22,13 @@ Detiene la ejecución del procesador una cierta cantidad de segundos.
 ### stop
 
 Detendrá completamente la ejecución de instrucciones en el procesador dejándolo inactivo permanentemente.
+
+![[control-flujo-stop.gif]]
 ### end
 
 Reiniciará el flujo de ejecución, regresando a la primera instrucción, es equivalente a haber llegado a la última instrucción.
 
+![[control-flujo-end.gif]]
 
 ### jump
 

@@ -4,7 +4,7 @@ Existen dos maneras principales de escribir el código lógico, de manera gráfi
 
 ## Editor visual
 
-El editor visual es la interfaz de edición que cuenta cada procesador (la que se abre al presionar el icono del lápiz). **Es el método recomendado para principiantes ya que fue diseñado para ser simple y fácil de entender y usar**.
+El editor visual es la interfaz de edición con la que cuenta cada procesador (la que se abre al presionar el icono del lápiz). **Es el método recomendado para principiantes ya que fue diseñado para ser simple y fácil de entender y usar**.
 
 Las ventajas de este por sobre la edición manual son las siguientes:
 
@@ -12,6 +12,7 @@ Las ventajas de este por sobre la edición manual son las siguientes:
 * Facilidad para escoger parámetros ya que muestra todos los necesarios.
 * Facilidad para establecer los saltos de linea (jumps).
 * Facilidad de usar para los jugadores de móvil.
+
 
 ![[editor-visual.png]]
 ## Editor manual
@@ -24,8 +25,8 @@ Las ventajas de este por sobre la edición visual son las siguientes:
 * Escribir código es mucho mas rápido que arrastrar y soltar bloques a través de la interfaz.
 * Puede usarse para crear pequeños fragmentos de código sin necesidad de entrar al juego.
 * Algunos editores muestran la sintaxis de tu código.
-* El texto de tus parámetros no queda bloqueado por el cuerpo del bloque.
-* Habilidad para salvar y acceder al código fuera de Mindustry.
+* El texto de tus parámetros no queda cortado por el cuerpo del bloque.
+* Habilidad para guardar y acceder al código fuera de Mindustry.
 
 ```
 ubind @dagger

@@ -1,6 +1,6 @@
 # Concepto de instrucción
 
-Las instrucciones son las acciones que le pedimos al procesador hacer, con un rango amplio suficiente para completar varias acciones, como controlar algo, realizar operaciones matemáticas, mostrar información, etc. Estas instrucciones por si solas no hacen mucho, pero si se usan en conjunto crean comportamientos que pueden ser de utilidad. El procesador las ejecutará una por una y en un orden específico que se explicará tiempo mas tarde.
+Las instrucciones son las acciones que le pedimos al procesador hacer, con un rango amplio suficiente para completar varias acciones, como controlar bloques y unidades, realizar operaciones matemáticas, mostrar información, etc. Estas instrucciones por si solas no hacen mucho, pero si se usan en conjunto crean comportamientos que pueden ser de utilidad. El procesador las ejecutará una por una y en un orden específico que se explicará más tarde.
 
 ## Datos de entrada
 

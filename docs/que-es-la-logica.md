@@ -53,7 +53,7 @@ Para usar la lógica dentro del juego, se cuenta con un conjunto de bloques espe
 
 `Hiperprocesador`
 
-: Versión mejorada del procesador lógico, con mucho más rango y velocidad, requiere refrigerante para funcionar.
+: Versión mejorada del procesador lógico, con mucho más rango y velocidad, requiere liquido criogénico para funcionar.
 
 `Unidad de memoria`
 
@@ -73,7 +73,7 @@ Para usar la lógica dentro del juego, se cuenta con un conjunto de bloques espe
 
 ## Limitaciones de la lógica
 
-La lógica cuenta con distintas limitaciones aplicadas a propósito, ya que el objetivo de la misma es proporcionar automatización a las acciones de unidades y bloques. Además tiene que estar optimizada ya que está corriendo dentro de un juego.
+La lógica cuenta con distintas limitaciones aplicadas a propósito, ya que el objetivo de la misma es proporcionar automatización a las acciones de unidades y bloques. Además tiene que estar optimizada ya que está corriendo dentro de el juego.
 
 * Una unidad no podrá minar si no cuenta con la capacidad de hacerlo.
 * Una unidad no podrá disparar si no cuenta con armas.
