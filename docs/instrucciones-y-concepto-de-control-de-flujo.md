@@ -9,6 +9,10 @@ El flujo de ejecución es el orden en el que las instrucciones se ejecutarán de
 * Todo lo realizado en los bucles de ejecución del procesador (declarar variables, asignar valores, etc.) es mantenido, no se elimina.
 
 ![[control-flujo-funcionamiento.gif]]
+!!! note Nota
+
+El código mostrado en este y los siguientes flujos no son funcionales y solo se usan para mostrar distintas instrucciones.
+
 ## Instrucciones
 
 Existen diversas instrucciones que permitirán modificar el flujo de ejecución de un procesador, estas se encuentran dentro de su propia categoría, `Control de flujo` con un color cían:

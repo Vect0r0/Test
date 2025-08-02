@@ -3,3 +3,4 @@ docs/.obsidian/*
 .obsidian/workspace.json
 .obsidian/core-plugins.json
 .obsidian/app.json
+.extras/*
