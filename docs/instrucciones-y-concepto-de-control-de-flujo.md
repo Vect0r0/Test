@@ -9,9 +9,8 @@ El flujo de ejecución es el orden en el que las instrucciones se ejecutarán de
 * Todo lo realizado en los bucles de ejecución del procesador (declarar variables, asignar valores, etc.) es mantenido, no se elimina.
 
 ![[control-flujo-funcionamiento.gif]]
-!!! note Nota
 
-El código mostrado en este y los siguientes flujos no son funcionales y solo se usan para mostrar distintas instrucciones.
+Nota:  El código mostrado en este y los siguientes flujos no funcionan y solo se usan para mostrar distintas instrucciones.
 
 ## Instrucciones
 
@@ -45,6 +44,9 @@ La piedra angular del sistema lógico, los saltos permiten crear comportamientos
 * `Mayor que >` Compara 2 objetos, números, etc. Resulta verdadero si el primero es mayor que el segundo.
 * `Mayor o igual que >=` Compara 2 objetos, números, etc. Resulta verdadero si el primero es mayor o igual que el segundo.
 * `Igualdad estricta === `: Equivalente a la igualdad, solo que no convertirá el tipo de dato de lo que se encuentre comparando.
+
+flowchart LR
+   A -- text --> B -- text2 --> C
 
 #### Estructuras en bucle o cíclicas
 
