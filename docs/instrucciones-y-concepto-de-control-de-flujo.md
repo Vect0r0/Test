@@ -10,7 +10,15 @@ El flujo de ejecución es el orden en el que las instrucciones se ejecutarán de
 
 ![[control-flujo-funcionamiento.gif]]
 
-Nota:  El código mostrado en este y los siguientes flujos no funcionan y solo se usan para mostrar distintas instrucciones.
+``` mermaid
+graph TD
+	A[Vincular Poly] --> B[Localizar mineral];
+	B --> C[Moverse a posicion del mineral];
+	C --> D[Minar el mineral];
+	D --> E[Localizar un nucleo aliado];
+	E --> F[Soltar 30 objetos al nucleo];
+```
+Nota:  El código mostrado en este y los siguientes flujos no funcionan y solo se usan para mostrar distintas instrucciones, pareciera funcionar pero recordemos que los procesadores hacen exactamente lo que les decimos y no tienen ambiguedades.
 
 ## Instrucciones
 
@@ -44,20 +52,6 @@ La piedra angular del sistema lógico, los saltos permiten crear comportamientos
 * `Mayor que >` Compara 2 objetos, números, etc. Resulta verdadero si el primero es mayor que el segundo.
 * `Mayor o igual que >=` Compara 2 objetos, números, etc. Resulta verdadero si el primero es mayor o igual que el segundo.
 * `Igualdad estricta === `: Equivalente a la igualdad, solo que no convertirá el tipo de dato de lo que se encuentre comparando.
-
----
-config:
-  flowchart:
-    htmlLabels: false
----
-flowchart LR
-    markdown["`This **is** _Markdown_`"]
-    newLines["`Line1
-    Line 2
-    Line 3`"]
-    markdown --> newLines
-
-
 
 #### Estructuras en bucle o cíclicas
 
