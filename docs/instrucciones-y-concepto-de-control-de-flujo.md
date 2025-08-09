@@ -45,8 +45,19 @@ La piedra angular del sistema lógico, los saltos permiten crear comportamientos
 * `Mayor o igual que >=` Compara 2 objetos, números, etc. Resulta verdadero si el primero es mayor o igual que el segundo.
 * `Igualdad estricta === `: Equivalente a la igualdad, solo que no convertirá el tipo de dato de lo que se encuentre comparando.
 
+---
+config:
+  flowchart:
+    htmlLabels: false
+---
 flowchart LR
-   A -- text --> B -- text2 --> C
+    markdown["`This **is** _Markdown_`"]
+    newLines["`Line1
+    Line 2
+    Line 3`"]
+    markdown --> newLines
+
+
 
 #### Estructuras en bucle o cíclicas
 
