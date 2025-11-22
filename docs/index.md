@@ -3,3 +3,5 @@
 La siguiente guía explicará el funcionamiento de este sistema dentro del juego, de una manera que puedas entender lo básico del mismo. Se basa en lo que conozco por lo que hay partes que podrían estar incompletas o tener algunos detalles. En el futuro se agregará el contenido relacionado a ultimas actualizaciones como lo es la v8.
 
 Es recomendable que tengas conocimiento previo relacionado a la programación para facilitarte el aprendizaje. Además de que nunca falta un poco de inglés, pero no es obligatoriamente necesario, haré lo posible para traducirlo y hacerlo lo más sencillo posible.
+
+Adicional al sistema de lógica, se ha agregado un nuevo apartado, los parches de datos, puedes consultarlos en su [[parches-de-datos|propio apartado]]

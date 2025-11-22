@@ -12,13 +12,15 @@ El flujo de ejecución es el orden en el que las instrucciones se ejecutarán de
 
 ``` mermaid
 graph TD
-	A[Vincular Poly] --> B[Localizar mineral];
-	B --> C[Moverse a posicion del mineral];
-	C --> D[Minar el mineral];
-	D --> E[Localizar un nucleo aliado];
-	E --> F[Soltar 30 objetos al nucleo];
+	A[Inicio] --> B
+	B[Vincular Poly] --> C[Localizar mineral];
+	C --> D[Moverse a posicion del mineral];
+	D --> E[Minar el mineral];
+	E --> F[Localizar un nucleo aliado];
+	F --> G[Soltar 30 objetos al nucleo];
+	G --> H[Fin];
 ```
-Nota:  El código mostrado en este y los siguientes flujos no funcionan y solo se usan para mostrar distintas instrucciones, pareciera funcionar pero recordemos que los procesadores hacen exactamente lo que les decimos y no tienen ambiguedades.
+Nota:  El código mostrado en este y los siguientes flujos no funcionan y solo se usan para mostrar distintas instrucciones, pareciera funcionar pero recordemos que los procesadores hacen exactamente lo que les decimos y no tienen ambigüedades.
 
 ## Instrucciones
 
@@ -51,12 +53,33 @@ La piedra angular del sistema lógico, los saltos permiten crear comportamientos
 * `Menor o igual que <=` Compara 2 objetos, números, etc. Resulta verdadero si el primero es menor o igual que el segundo.
 * `Mayor que >` Compara 2 objetos, números, etc. Resulta verdadero si el primero es mayor que el segundo.
 * `Mayor o igual que >=` Compara 2 objetos, números, etc. Resulta verdadero si el primero es mayor o igual que el segundo.
-* `Igualdad estricta === `: Equivalente a la igualdad, solo que no convertirá el tipo de dato de lo que se encuentre comparando.
+* `Igualdad estricta === ` Equivalente a la igualdad, solo que no convertirá el tipo de dato de lo que se encuentre comparando.
+* `Siempre always` Es una condición que siempre será cierta, resultando en que siempre se salte.
 
-#### Estructuras en bucle o cíclicas
+## Estructuras en bucle o cíclicas
 
 El comportamiento de la instrucción jump nos permite crear estructuras que en programación se conoce como cíclicas, donde una sección de código se repite tantas veces sea necesario ya sea usando un valor que se incrementa cada que se ejecuta una iteración del bucle o hasta que una condición se cumpla.
 
+
+
+
+En el código anterior se crea un ciclo que repite una sección de código hasta que un valor incrementado alcanza cierta cantidad, al terminar el bucle y como no existen instrucciones posteriores se regresa a la primera instrucción, reiniciando la iteración y volviendo a establecer parámetros.
+
+## Creación de un flujo de ejecución variable 
+
+Ahora que conocemos como el flujo de ejecución se ejecuta normalmente, las distintas instrucciones que existen para modificarlo y las estructuras que podemos hacer, podemos construir comportamientos avanzados como el que se veía en ejemplos anteriores como minar y depositar al núcleo.
+
+
+``` mermaid
+graph TD
+	A[Inicio] --> B
+	B[Vincular Poly] --> C[Localizar mineral];
+	C --> D[El poly tiene el inventario lleno?];
+	D --> E[Minar el mineral];
+	E --> F[Localizar un nucleo aliado];
+	F --> G[Soltar 30 objetos al nucleo];
+	G --> H[Fin];
+```
 
 ## Manipulación avanzada del flujo de ejecución
 
