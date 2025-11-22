@@ -4,3 +4,4 @@ docs/.obsidian/*
 .obsidian/core-plugins.json
 .obsidian/app.json
 .extras/*
+.obsidian/graph.json

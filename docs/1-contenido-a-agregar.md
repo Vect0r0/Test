@@ -27,4 +27,9 @@
 * [ ] Ejemplos prácticos y proyectos.
 	* [ ] Sistemas comunes.
 	* [ ] Retos.
-* [ ] Recursos adicionales
+* [ ] Recursos adicionales.
+* [ ] [[logica-estatica|Lógica estática]]
+	* [ ] [[logica-estatica#¿Qué es la lógica estática?|¿Qué es la lógica estática]]
+	* [ ] [[logica-estatica#Funciones de la lógica estática|Funciones de la lógica estática]]
+	* [ ] [[logica-estatica#Limitaciones de la lógica estática|Limitaciones de la lógica estática]]
+	* [ ] [[logica-estatica#Acceder a la lógica estática dentro del juego|Acceder a la lógica estática dentro del juego]]
