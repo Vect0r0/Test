@@ -1,3 +1,6 @@
+---
+icon: material-cog
+---
 # ¿Qué es la lógica?
 
 La lógica (mlog) es un lenguaje de programación tipo scripting (ejecutado en tiempo real) creado para profundizar más en la automatización y creación de procesos en el juego, ya que nos permite modificar las entidades del mismo dependiendo de ciertas acciones, condiciones etc.
@@ -85,3 +88,4 @@ Además de esto, los procesadores lógicos cuentan con una cantidad definida de 
 * `Microprocesador - 2 ipt * 60 tps` = 120 instrucciones por segundo.
 * `Procesador lógico - 8 ipt * 60 tps` = 480 instrucciones por segundo.
 * `Hiperprocesador - 25 ipt * 60 tps` = 1500 instrucciones por segundo.
+

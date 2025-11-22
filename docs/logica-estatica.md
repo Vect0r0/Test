@@ -62,4 +62,4 @@ Tendrás disponibles 4 bloques estáticos (amarillos) para su uso.
 
 : Puede ser activado y desactivado.
 
-Ten en cuenta que todos estos bloques son `indestructibles` dentro del juego por lo que no tienes que preocuparte de su posición etc.
+Ten en cuenta que todos estos bloques son `indestructibles` dentro del juego por lo que no tienes que preocuparte por donde los pones y correr el riesgo de que se destruyan.
