@@ -33,3 +33,4 @@
 	* [ ] [[logica-estatica#Funciones de la lógica estática|Funciones de la lógica estática]]
 	* [ ] [[logica-estatica#Limitaciones de la lógica estática|Limitaciones de la lógica estática]]
 	* [ ] [[logica-estatica#Acceder a la lógica estática dentro del juego|Acceder a la lógica estática dentro del juego]]
+	* [ ] [[instrucciones-estaticas|Instrucciones estáticas]]
