@@ -40,6 +40,7 @@ Te permite aplicar o quitar un estado alterado a una unidad.
 Nota: Existen estados alterados no listados (`unarmed`) que evita que la unidad ataque es uno de ellos, solo puede usarse escribiendo el código manualmente.
 
 ![[instruccion-estatica-apply-status.png]]
+
 * `apply` permitirá establecer un estado alterado.
 * `corroded` es el menú de selección del estado alterado a aplicar. ![[instruccion-estatica-apply-status-status-menu.png]]
 * `to` es la referencia a la unidad a la cual aplicar el estado, podrías usar la referencia que generó `Spawn Unit` o alguna otra.
@@ -55,6 +56,7 @@ Nota: Existen estados alterados no listados (`unarmed`) que evita que la unidad 
 Te permite detectar si el clima seleccionado se encuentra activo en el mapa.
 
 ![[instruccion-estatica-weather-sense.png]]
+
 * `result` será 1 si el clima se encuentra activo, 0 en cualquier otro caso.
 * `weather` es el tipo de clima.                                                ![[instruccion-estatica-weather-sense-climas.png]]
 	* `snowing` nevando.
@@ -70,6 +72,7 @@ Te permite detectar si el clima seleccionado se encuentra activo en el mapa.
 Te permite establecer un clima determinado en el mapa.
 
 ![[instruccion-estatica-weather-set.png]]
+
 * `set weather` es la lista de climas que pueden aplicarse.
 * `state` es el booleano que decide si el clima estará activo o no.
 
