@@ -32,6 +32,8 @@ Te permite hacer aparecer unidades en cierta posición.
 * `rot` es la rotación que tendrá la unidad, medida en grados.
 
 Nota: Hay entidades en el juego que son consideradas como unidades, como lo son los misiles de las unidades en erekir, estos y las unidades ocultas pueden ser aparecidas con este comando.
+* `scathe-missile` ahora tiene 3 variantes `scathe-missile` `scathe-missile-surge` y `scathe-missile-phase`.
+
 
 ## Apply Status
 
@@ -58,7 +60,7 @@ Te permite detectar si el clima seleccionado se encuentra activo en el mapa.
 ![[instruccion-estatica-weather-sense.png]]
 
 * `result` será 1 si el clima se encuentra activo, 0 en cualquier otro caso.
-* `weather` es el tipo de clima.                                                             ![[instruccion-estatica-weather-sense-climas.png]]
+* `weather` es el tipo de clima. ![[instruccion-estatica-weather-sense-climas.png]]
 	* `snowing` nevando.
 	* `rain` lluvia.
 	* `sandstorm` tormenta de arena.
@@ -85,3 +87,63 @@ Te permite aparecer una oleada en el mapa en cierta posición.
 
 * `natural` es el booleano que decide si la oleada es natural o no, si la oleada no es natural esta no incrementará el contador de oleadas y no podrás decidir en que posición esta aparecerá.
 * `x y` son el par de coordenadas usadas para aparecer la oleada solo si `natural` es falso.
+
+
+## Set Rule
+
+Te permite establecer o cambiar una regla de la partida.
+
+![[instruccion-estatica-set-rule.png]]
+
+![[instrucciones-estaticas-set-rule-rules.png]]
+
+La mayoría de estas reglas tienen una descripción dentro del juego que aparece al poner el mouse encima de ellas o dejar apretado el dedo en móviles y solo se explicarán las que tienen más detalles o no cuentan con ella (si quieren una en especifico pídanla).
+
+* `mapArea` permite modificar el área del mapa en la cual se puede jugar, todo bloque fuera de ella se inactivará inmediatamente además de que las unidades no podrían pasar de ese borde, `x` `y` son el punto inicial desde donde inicia la zona, `w/width` es el ancho de la zona, o cuanto se extiende desde el punto `x` a la derecha y `h/height` es el largo de la zona, o cuanto se extiende desde `y` hacia arriba.
+* `canGameOver` valor booleano que dice si se puede o no perder en el mapa, ya sea perdiendo todos tus núcleos o destruyendo los enemigos, esta regla puede evitarlo.
+
+
+## Flush Message
+
+Te permite mostrar un mensaje en la pantalla usando el texto almacenado en la cola/buffer de texto. 
+
+![[instruccion-estatica-flush-message.png]]
+
+* `announce` es la lista de tipos de formato para mostrar el mensaje.
+	*  ![[instruccion-estatica-flush-message-announce.png]]
+	* ![[instruccion-estatica-flush-message-notify.png]]
+	* ![[instruccion-estatica-flush-message-toast.png]]
+	* ![[instruccion-estatica-flush-message-mission.png]]
+* `for` es la cantidad de segundos que se mostrará el mensaje en pantalla.
+* `succes` es el nombre de la variable booleana que indicará si este mensaje fue mostrado con éxito, anteriormente estas instrucciones esperaban a que finalizara el mensaje anterior, ahora si no está la oportunidad son saltadas, ese es el por que de la instrucción ya que ahora tu tendrás que configurar el código para evitar errores.
+
+
+## Cutscene
+
+Te permite crear una cinemática, mientras esté activa el jugador no podrá moverse o realizar acciones.
+
+![[instruccion-estatica-cutscene.png]]
+
+* `pan` es la lista de acciones a realizar
+	* `pan` se moverá a las coordenadas `x` `y` especificadas a una cierta velocidad.
+	* `zoom` hará zoom en la posición de la cámara actual, el zoom va del `0` al `1`.
+	* `stop` detendrá la cinemática anterior.
+
+
+## Effect
+
+Creará un efecto de partículas. Los campos que se mostrarán dependerán del efecto de partículas seleccionado.
+
+![[logica-estatica-effect.png]]
+
+* `bubble` es la lista desplegable de los efectos a usar, en el juego se ven de manera gráfica.
+* `x` `y` son el par de coordenadas en las cuales el efecto se creará.
+* `size` será el tamaño del efecto.
+* `color` es el color hexadecimal que tendrá la partícula, dentro del juego tienes un selector.
+* `rotation` es la rotación en grados que tendrá el efecto.
+* `data` es el tipo de bloque a usar.
+
+
+## Explosion
+
+Creará una explosion
