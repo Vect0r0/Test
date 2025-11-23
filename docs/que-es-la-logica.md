@@ -1,6 +1,3 @@
----
-icon: material-cog
----
 # ¿Qué es la lógica?
 
 La lógica (mlog) es un lenguaje de programación tipo scripting (ejecutado en tiempo real) creado para profundizar más en la automatización y creación de procesos en el juego, ya que nos permite modificar las entidades del mismo dependiendo de ciertas acciones, condiciones etc.

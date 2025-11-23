@@ -56,7 +56,7 @@ Te permite detectar si el clima seleccionado se encuentra activo en el mapa.
 
 ![[instruccion-estatica-weather-sense.png]]
 * `result` será 1 si el clima se encuentra activo, 0 en cualquier otro caso.
-* `weather` es el tipo de clima ![[instruccion-estatica-weather-sense-climas.png]]
+* `weather` es el tipo de clima.                                                ![[instruccion-estatica-weather-sense-climas.png]]
 	* `snowing` nevando.
 	* `rain` lluvia.
 	* `sandstorm` tormenta de arena.
