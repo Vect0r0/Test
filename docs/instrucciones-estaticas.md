@@ -146,4 +146,31 @@ Creará un efecto de partículas. Los campos que se mostrarán dependerán del e
 
 ## Explosion
 
-Creará una explosion
+Creará una explosión en una posición.
+
+![[instruccion-estatica-explosion.png]]
+
+* `team` es el equipo al que pertenece la explosión, a este equipo no le afectará la explosión y no recibirá daño.
+* `x y` es el par de coordenadas en las cuales la explosión se realizará.
+* `radius` es el radio que tendrá la explosión.
+* `damage` es el daño que realizará la explosión.
+* `air` es un booleano que indicará si la explosión daña a unidades aéreas.
+* `ground` es un booleano que indicará si la explosión daña a unidades terrestres o bloques.
+* `pierce` es un booleano que indicará si la explosión atraviesa bloques, si se establece en `false` solo el bloque más cercano recibirá daño y este no se propagará.
+* `effect` es un booleano que indicará si la explosión tiene un efecto visual, si se establece en `false` solo se realizará el daño y no se verá gráficamente.
+
+
+## Set Rate
+
+Establece la velocidad de ejecución de este procesador.
+
+![[instruccion-estatica-set-rate.png]]
+
+* `ipt` es la cantidad de instrucciones por tick que se realizarán. El límite máximo de instrucciones por tick es de 1000. Dando un total de 60000 instrucciones por segundo en condiciones perfectas.
+
+
+## Fetch
+
+
+
+## Sync
